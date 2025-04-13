@@ -1,0 +1,25 @@
+Insertar y recuperar registros de una tabla (insert into - select)
+
+Primer problema:
+
+Trabaje con la tabla "agenda" que almacena información de sus amigos.
+
+1- Elimine la tabla "agenda", si existe:
+
+2- Cree una tabla llamada "agenda". Debe tener los siguientes campos: apellido (cadena de 30), 
+nombre (cadena de 20), domicilio (cadena de 30) y telefono (cadena de 11):
+
+3- Visualice las tablas existentes para verificar la creación de "agenda" 
+
+4- Visualice la estructura de la tabla "agenda".
+
+5- Ingrese los siguientes registros:
+
+('Moreno','Alberto','Colon 123','4234567');
+('Torres','Juan','Avellaneda 135','4458787');
+
+6- Seleccione todos los registros de la tabla:
+
+7- Elimine la tabla "agenda":
+
+8- Intente eliminar la tabla nuevamente
