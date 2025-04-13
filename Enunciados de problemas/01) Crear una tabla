@@ -1,0 +1,29 @@
+Crear una tabla (create table - sp_tables - sp_columns - drop table)
+
+Primer problema:
+
+Necesita almacenar los datos de sus amigos en una tabla. Los datos que guardará serán: apellido, 
+nombre, domicilio y teléfono.
+
+1- Elimine la tabla "agenda" si existe:
+
+2- Intente crear una tabla llamada "/agenda":
+ create table /agenda(
+  apellido varchar(30),
+  nombre varchar(20),
+  domicilio varchar(30),
+  telefono varchar(11)
+ );
+
+3- Cree una tabla llamada "agenda", debe tener los siguientes campos: apellido, varchar(30); nombre, 
+varchar(20); domicilio, varchar (30) y telefono, varchar(11):
+
+4- Intente crearla nuevamente. Aparece mensaje de error.
+
+5- Visualice las tablas existentes.
+
+6- Visualice la estructura de la tabla "agenda".
+
+7- Elimine la tabla.
+
+8- Intente eliminar la tabla, sin controlar si existe. Debe aparecer un mensaje de error.
