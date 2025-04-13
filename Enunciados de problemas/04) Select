@@ -1,0 +1,31 @@
+Recuperar algunos campos (select)
+
+Primer problema:
+
+Un videoclub que alquila películas en video almacena la información de sus películas en alquiler en 
+una tabla llamada "peliculas".
+
+1- Elimine la tabla, si existe:
+
+2- Cree la tabla:
+
+ create table peliculas(
+  titulo varchar(20),
+  actor varchar(20),
+  duracion integer,
+  cantidad integer
+ );
+
+3- Vea la estructura de la tabla.
+
+4- Ingrese los siguientes registros:
+('Mision imposible','Tom Cruise',180,3);
+('Mision imposible 2','Tom Cruise',190,2);
+('Mujer bonita','Julia Roberts',118,3);
+('Elsa y Fred','China Zorrilla',110,2);
+
+5- Realice un "select" mostrando solamente el título y actor de todas las películas
+
+6- Muestre el título y duración de todas las peliculas
+
+7- Muestre el título y la cantidad de copias
