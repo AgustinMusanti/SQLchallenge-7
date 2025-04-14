@@ -1,0 +1,30 @@
+Operadores relacionales
+
+Primer problema:
+
+Un comercio que vende artículos de computación registra los datos de sus artículos en una tabla con 
+ese nombre.
+
+1- Elimine "articulos", si existe:
+
+2- Cree la tabla, con la siguiente estructura:
+
+ create table articulos(
+  codigo integer,
+  nombre varchar(20),
+  descripcion varchar(30),
+  precio float,
+  cantidad integer
+ );
+
+3- Vea la estructura de la tabla.
+
+4- Ingrese algunos registros:
+
+5- Seleccione los datos de las impresoras
+
+6- Seleccione los artículos cuyo precio sea mayor o igual a 400
+
+7- Seleccione el código y nombre de los artículos cuya cantidad sea menor a 30
+
+8- Selecciones el nombre y descripción de los artículos que NO cuesten $100
