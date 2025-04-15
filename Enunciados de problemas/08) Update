@@ -1,0 +1,32 @@
+Actualizar registros (update)
+
+Primer problema:
+
+Trabaje con la tabla "agenda" que almacena los datos de sus amigos.
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla:
+
+ create table agenda(
+  apellido varchar(30),
+  nombre varchar(20),
+  domicilio varchar(30),
+  telefono varchar(11)
+ );
+
+3- Ingrese los siguientes registros:
+
+('Acosta','Alberto','Colon 123','4234567');
+('Juarez','Juan','Avellaneda 135','4458787');
+('Lopez','Maria','Urquiza 333','4545454');
+('Lopez','Jose','Urquiza 333','4545454');
+('Suarez','Susana','Gral. Paz 1234','4123456');
+
+4- Modifique el registro cuyo nombre sea "Juan" por "Juan Jose"
+
+5- Actualice los registros cuyo número telefónico sea igual a "4545454" por "4445566" 
+
+6- Actualice los registros que tengan en el campo "nombre" el valor "Juan" por "Juan Jose"
+
+7 - Luego de cada actualización ejecute un select que muestre todos los registros de la tabla.
