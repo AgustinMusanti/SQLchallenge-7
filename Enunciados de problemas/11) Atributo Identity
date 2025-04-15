@@ -1,0 +1,37 @@
+Campo con atributo Identity
+
+Primer problema:
+
+Una farmacia guarda información referente a sus medicamentos en una tabla llamada "medicamentos".
+
+1- Elimine la tabla,si existe:
+
+2- Cree la tabla con un campo "codigo" que genere valores secuenciales automáticamente:
+
+ create table medicamentos(
+  codigo int identity,
+  nombre varchar(20) not null,
+  laboratorio varchar(20),
+  precio float,
+  cantidad integer
+ );
+
+3- Visualice la estructura de la tabla "medicamentos":
+
+4- Ingrese los siguientes registros:
+
+('Sertal','Roche',5.2,100);
+('Buscapina','Roche',4.10,200);
+('Amoxidal 500','Bayer',15.60,100);
+
+5- Verifique que SQL Server generó valores para el campo "código" de modo automático:
+
+6- Intente ingresar un registro con un valor para el campo "codigo"
+
+7- Intente actualizar un valor de código
+
+8- Elimine el registro con codigo "3"
+
+9- Ingrese un nuevo registro:
+
+10- Seleccione todos los registros para ver qué valor guardó SQL Server en el campo código:
