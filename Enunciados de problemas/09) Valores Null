@@ -28,8 +28,7 @@ Una farmacia guarda información referente a sus medicamentos en una tabla llama
 
 8- Muestre todos los registros:
 
-9- Intente ingresar un registro con valor nulo para un campo que no lo admite (aparece un mensaje de 
-error):
+9- Intente ingresar un registro con valor nulo para un campo que no lo admite:
 
 10- Recupere los registros que contengan valor "null" en el campo "laboratorio", luego los que 
 tengan una cadena vacía en el mismo campo. Note que el resultado es diferente.
