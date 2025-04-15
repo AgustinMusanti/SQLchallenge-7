@@ -10,6 +10,7 @@ Trabaje con la tabla "agenda" que registra la información referente a sus amigo
 domicilio (cadena de 30) y telefono (cadena de 11):
 
 3- Ingrese los siguientes registros:
+
  Alvarez,Alberto,Colon 123,4234567,
  Juarez,Juan,Avellaneda 135,4458787,
  Lopez,Maria,Urquiza 333,4545454,
