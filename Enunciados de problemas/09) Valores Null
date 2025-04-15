@@ -1,0 +1,43 @@
+Valores null (is null)
+
+Primer problema:
+
+Una farmacia guarda información referente a sus medicamentos en una tabla llamada "medicamentos".
+
+1- Elimine la tabla, si existe:
+
+2- Cree la tabla con la siguiente estructura:
+
+ create table medicamentos(
+  codigo integer not null,
+  nombre varchar(20) not null,
+  laboratorio varchar(20),
+  precio float,
+  cantidad integer not null
+ );
+
+3- Visualice la estructura de la tabla "medicamentos":
+
+4- Ingrese algunos registros con valores "null" para los campos que lo admitan:
+
+5- Vea todos los registros:
+
+6- Ingrese un registro con valor "0" para el precio y cadena vacía para el laboratorio:
+
+7- Ingrese un registro con valor "0" para el código y cantidad y cadena vacía para el nombre:
+
+8- Muestre todos los registros:
+
+9- Intente ingresar un registro con valor nulo para un campo que no lo admite (aparece un mensaje de 
+error):
+
+10- Recupere los registros que contengan valor "null" en el campo "laboratorio", luego los que 
+tengan una cadena vacía en el mismo campo. Note que el resultado es diferente.
+
+11- Recupere los registros que contengan valor "null" en el campo "precio", luego los que tengan el 
+valor 0 en el mismo campo. Note que el resultado es distinto.
+
+12- Recupere los registros cuyo laboratorio no contenga una cadena vacía, luego los que sean 
+distintos de "null".
+
+13- Recupere los registros cuyo precio sea distinto de 0, luego los que sean distintos de "null":
