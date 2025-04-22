@@ -1,0 +1,42 @@
+Truncate table
+
+Primer problema:
+
+Un instituto de enseñanza almacena los datos de sus estudiantes en una tabla llamada "alumnos".
+
+1- Elimine la tabla "alumnos" si existe:
+
+2- Cree la tabla con la siguiente estructura:
+
+ create table alumnos(
+  legajo int identity,
+  documento varchar(8),
+  nombre varchar(30),
+  domicilio varchar(30)
+ );
+
+3- Ingrese los siguientes registros y muéstrelos para ver la secuencia de códigos:
+
+('22345345','Perez Mariana','Colon 234');
+('23545345','Morales Marcos','Avellaneda 348');
+('24356345','Gonzalez Analia','Caseros 444');
+('25666777','Torres Ramiro','Dinamarca 209');
+
+4- Elimine todos los registros con "delete".
+
+5- Ingrese los siguientes registros y selecciónelos para ver cómo SQL Server generó los códigos:
+
+('22345345','Perez Mariana','Colon 234');
+('23545345','Morales Marcos','Avellaneda 348');
+('24356345','Gonzalez Analia','Caseros 444');
+('25666777','Torres Ramiro','Dinamarca 209');
+
+6- Elimine todos los registros con "truncate table".
+
+7- Ingrese los siguientes registros y muestre todos los registros para ver que SQL Server reinició 
+la secuencia del campo "identity":
+
+('22345345','Perez Mariana','Colon 234');
+('23545345','Morales Marcos','Avellaneda 348');
+('24356345','Gonzalez Analia','Caseros 444');
+('25666777','Torres Ramiro','Dinamarca 209');
