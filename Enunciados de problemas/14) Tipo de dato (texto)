@@ -1,0 +1,22 @@
+Tipo de dato (texto)
+
+Primer problema:
+
+Una concesionaria de autos vende autos usados y almacena los datos de los autos en una tabla llamada 
+"autos".
+
+1- Elimine la tabla "autos" si existe:
+
+2- Cree la tabla eligiendo el tipo de dato adecuado para cada campo, estableciendo el campo 
+"patente" como clave primaria:
+
+3- Ingrese los siguientes registros:
+
+('ACD123','Fiat 128','1970',15000);
+('ACG234','Renault 11','1990',40000);
+('BCD333','Peugeot 505','1990',80000);
+('GCD123','Renault Clio','1990',70000);
+('BCC333','Renault Megane','1998',95000);
+('BVF543','Fiat 128','1975',20000);
+
+4- Seleccione todos los autos del año 1990:
