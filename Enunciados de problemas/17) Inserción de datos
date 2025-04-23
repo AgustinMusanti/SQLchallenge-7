@@ -1,0 +1,29 @@
+Ingresar algunos campos (insert into)
+
+Un banco tiene registrados las cuentas corrientes de sus clientes en una tabla llamada "cuentas".
+1- Elimine la tabla "cuentas" si existe:
+
+2- Cree la tabla :
+
+ create table cuentas(
+  numero int identity,
+  documento char(8) not null,
+  nombre varchar(30),
+  saldo money
+ );
+
+3- Ingrese un registro con valores para todos sus campos, inclusive el campo identity, omitiendo la 
+lista de campos:
+
+4- Ingrese un registro con valores para todos sus campos omitiendo la lista de campos (excepto el 
+campo "identity"):
+
+5- Ingrese un registro omitiendo algún campo que admitan valores nulos.
+
+6- Intente ingresar un registro con valor para el campo "numero":
+
+7- Intente ingresar un registro listando 3 campos y colocando 4 valores
+
+8- Intente ingresar un registro sin valor para el campo "documento"
+
+9- Vea los registros ingresados:
