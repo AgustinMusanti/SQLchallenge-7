@@ -1,6 +1,7 @@
 Ingresar algunos campos (insert into)
 
 Un banco tiene registrados las cuentas corrientes de sus clientes en una tabla llamada "cuentas".
+
 1- Elimine la tabla "cuentas" si existe:
 
 2- Cree la tabla :
