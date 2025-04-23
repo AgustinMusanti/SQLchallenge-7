@@ -1,0 +1,29 @@
+Tipo de dato (fecha y hora)
+
+Una facultad almacena los datos de sus alumnos en una tabla denominada "alumnos".
+
+1- Elimine la tabla, si existe:
+
+2- Cree la tabla eligiendo el tipo de dato adecuado para cada campo:
+
+3- Setee el formato para entrada de datos de tipo fecha para que acepte valores "día-mes-año": 
+
+4- Ingrese un alumno empleando distintos separadores para las fechas:
+
+5- Ingrese otro alumno empleando solamente un dígito para día y mes y 2 para el año:
+
+6- Ingrese un alumnos empleando 2 dígitos para el año de la fecha de ingreso y "null" en 
+"fechanacimiento":
+
+7- Intente ingresar un alumno con fecha de ingreso correspondiente a "15 de marzo de 1990" pero en 
+orden incorrecto "03-15-90":
+
+8- Muestre todos los alumnos que ingresaron antes del '1-1-91'.
+
+9- Muestre todos los alumnos que tienen "null" en "fechanacimiento":
+
+10- Intente ingresar una fecha de ingreso omitiendo los separadores:
+
+11- Setee el formato de entrada de fechas para que acepte valores "mes-dia-año".
+
+12- Ingrese el registro del punto 7.
