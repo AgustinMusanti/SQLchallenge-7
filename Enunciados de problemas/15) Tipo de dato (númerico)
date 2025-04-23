@@ -1,0 +1,36 @@
+Tipo de dato (numérico)
+
+
+Un banco tiene registrados las cuentas corrientes de sus clientes en una tabla llamada "cuentas".
+La tabla contiene estos datos:
+
+	Número de Cuenta        Documento       Nombre          Saldo
+	______________________________________________________________
+        1234                          25666777        Pedro Perez     500000.60
+        2234                          27888999        Juan Lopez      -250000
+        3344                          27888999        Juan Lopez      4000.50
+        3346                          32111222        Susana Molina   1000
+
+1- Elimine la tabla "cuentas" si existe:
+
+2- Cree la tabla eligiendo el tipo de dato adecuado para almacenar los datos descriptos arriba:
+
+ - Número de cuenta: entero, no nulo, no puede haber valores repetidos, clave primaria;
+ - Documento del propietario de la cuenta: cadena de caracteres de 8 de longitud (siempre 8), no nulo;
+ - Nombre del propietario de la cuenta: cadena de caracteres de 30 de longitud,
+ - Saldo de la cuenta: valores altos con decimales.
+
+3- Ingrese los siguientes registros:
+
+('1234','25666777','Pedro Perez',500000.60);
+('2234','27888999','Juan Lopez',-250000);
+('3344','27888999','Juan Lopez',4000.50);
+('3346','32111222','Susana Molina',1000);
+
+4- Seleccione todos los registros cuyo saldo sea mayor a "4000" (2 registros)
+
+5- Muestre el número de cuenta y saldo de todas las cuentas cuyo propietario sea "Juan Lopez"
+
+6- Muestre las cuentas con saldo negativo
+
+7- Muestre todas las cuentas cuyo número es igual o mayor a "3000" (2 registros):
