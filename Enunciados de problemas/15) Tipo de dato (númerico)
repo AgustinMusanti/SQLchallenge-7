@@ -27,10 +27,10 @@ La tabla contiene estos datos:
 ('3344','27888999','Juan Lopez',4000.50);
 ('3346','32111222','Susana Molina',1000);
 
-4- Seleccione todos los registros cuyo saldo sea mayor a "4000" (2 registros)
+4- Seleccione todos los registros cuyo saldo sea mayor a "4000".
 
 5- Muestre el número de cuenta y saldo de todas las cuentas cuyo propietario sea "Juan Lopez"
 
 6- Muestre las cuentas con saldo negativo
 
-7- Muestre todas las cuentas cuyo número es igual o mayor a "3000" (2 registros):
+7- Muestre todas las cuentas cuyo número es igual o mayor a "3000":
