@@ -1,0 +1,28 @@
+Alias
+
+Trabaje con la tabla "libros" de una librería.
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla:
+
+ create table libros(
+  codigo int identity,
+  titulo varchar(40) not null,
+  autor varchar(20) default 'Desconocido',
+  editorial varchar(20),
+  precio decimal(6,2),
+  cantidad tinyint default 0,
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros:
+
+4- Muestre todos los campos de los libros y un campo extra, con el encabezado "monto total" en la 
+que calcule el monto total en dinero de cada libro.
+
+5- Muestre el título, autor y precio de todos los libros de editorial "Emece" y agregue dos columnas 
+extra en las cuales muestre el descuento de cada libro, con el encabezado "descuento" y el precio 
+con un 10% de descuento con el encabezado "precio final".
+
+6- Muestre una columna con el título y el autor concatenados con el encabezado "Título y autor"
