@@ -1,0 +1,29 @@
+Columnas calculadas (operadores aritméticos y de concatenación)
+
+Un comercio que vende artículos de computación registra los datos de sus artículos en una tabla con 
+ese nombre.
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla:
+
+ create table articulos(
+  codigo int identity,
+  nombre varchar(20),
+  descripcion varchar(30),
+  precio smallmoney,
+  cantidad tinyint default 0,
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros:
+
+4- El comercio quiere aumentar los precios de todos sus artículos en un 15%. Actualice todos los 
+precios empleando operadores aritméticos.
+
+5- Vea el resultado:
+
+6- Muestre todos los artículos, concatenando el nombre y la descripción de cada uno de ellos 
+separados por coma.
+
+7- Reste a la cantidad de todos los teclados, el valor 5, empleando el operador aritmético menos ("-")
