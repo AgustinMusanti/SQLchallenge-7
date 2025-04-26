@@ -1,0 +1,28 @@
+Funciones para el uso de fechas y horas
+
+Una empresa almacena los datos de sus empleados en una tabla denominada "empleados".
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla:
+
+ create table empleados(
+  nombre varchar(30) not null,
+  apellido varchar(20) not null,
+  documento char(8),
+  fechanacimiento datetime,
+  fechaingreso datetime,
+  sueldo decimal(6,2),
+  primary key(documento)
+ );
+
+3- Ingrese algunos registros:
+
+4- Muestre nombre y apellido concatenados, con el apellido en letras mayúsculas, el documento 
+precedido por "DNI Nº " y el sueldo precedido por "$ ".
+
+5- Muestre el documento y el sueldo redondeado hacia arriba y precedido por "$ ".
+
+6- Muestre los nombres y apellidos de los empleados que cumplen años en el mes "october"
+
+7- Muestre los nombres y apellidos de los empleados que ingresaron en un determinado año
