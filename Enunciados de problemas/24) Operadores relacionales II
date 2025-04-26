@@ -1,0 +1,23 @@
+Otros operadores relacionales (is null)
+
+Trabajamos con la tabla "peliculas" de un video club que alquila películas en video.
+
+1- Elimine la tabla, si existe;
+
+2- Créela con la siguiente estructura:
+
+ create table peliculas(
+  codigo int identity,
+  titulo varchar(40) not null,
+  actor varchar(20),
+  duracion tinyint,
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros:
+
+4- Recupere las películas cuyo actor sea nulo.
+
+5- Cambie la duración a 0, de las películas que tengan duración igual a "null".
+
+6- Borre todas las películas donde el actor sea "null" y cuya duración sea 0.
