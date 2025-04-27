@@ -21,7 +21,7 @@ pais, fechayhora de la visita.
 ('Ana Maria Lopez','AnaMaria@hotmail.com','Argentina','2006-10-10 10:10');
 ('Gustavo Gonzalez','GustavoGGonzalez@gotmail.com','Chile','2006-10-10 21:30');
 ('Juancito','JuanJosePerez@hotmail.com','Argentina','2006-10-11 15:45');
-'Fabiola Martinez','MartinezFabiola@hotmail.com','Mexico','2006-10-12 08:15');
+('Fabiola Martinez','MartinezFabiola@hotmail.com','Mexico','2006-10-12 08:15');
 ('Fabiola Martinez','MartinezFabiola@hotmail.com','Mexico','2006-09-12 20:45');
 ('Juancito','JuanJosePerez@gmail.com','Argentina','2006-09-12 16:20');
 ('Juancito','JuanJosePerez@hotmail.com','Argentina','2006-09-15 16:25');
