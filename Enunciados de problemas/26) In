@@ -2,18 +2,17 @@ Otros operadores relacionales (in)
 
 Trabaje con la tabla llamada "medicamentos" de una farmacia.
 
-1- Elimine la tabla, si existe:
+1- Elimine la tabla "medicamentos", si existe:
 
 2- Cree la tabla con la siguiente estructura:
 
  create table medicamentos(
-  codigo int identity,
+  codigo int identity primary key,
   nombre varchar(20),
   laboratorio varchar(20),
   precio decimal(6,2),
   cantidad tinyint,
   fechavencimiento datetime not null,
-  primary key(codigo)
  );
 
 3- Ingrese algunos registros:
