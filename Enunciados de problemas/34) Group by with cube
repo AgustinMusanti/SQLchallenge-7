@@ -1,0 +1,32 @@
+Modificador del group by (with cube)
+
+Un comercio guarda la información de sus ventas en una tabla llamada "ventas" en la que se registra 
+diariamente, el número de venta, el monto total de la compra, el tipo de pago (c=contado, t=tarjeta) 
+y el nombre del vendedor.
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla:
+
+ create table ventas(
+  numero int identity,
+  montocompra decimal(6,2),
+  tipopago char(1),--c=contado, t=tarjeta
+  vendedor varchar(30),
+  primary key (numero)
+ );
+
+3- Ingrese algunos registros:
+
+(100.50,'c','Marisa Perez');
+(200,'c','Marisa Perez');
+(50,'t','Juan Lopez');
+(220,'c','Juan Lopez');
+(150,'t','Marisa Perez');
+(550.80,'c','Marisa Perez');
+(300,'t','Juan Lopez');
+(25,'c','Marisa Perez');
+
+4- Agrupe por "tipopago" y "vendedor" y cuente la cantidad empleando "rollup".
+
+5- Agrupe por "tipopago" y "vendedor" y cuente la cantidad empleando "cube".
