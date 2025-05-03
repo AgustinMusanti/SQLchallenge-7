@@ -1,0 +1,33 @@
+Restricción default
+
+Un comercio que tiene un stand en una feria registra en una tabla llamada "visitantes" algunos datos 
+de las personas que visitan o compran en su stand para luego enviarle publicidad de sus productos.
+
+1- Elimine la tabla "visitantes", si existe:
+
+2- Cree la tabla con la siguiente estructura:
+
+ create table visitantes(
+  numero int identity,
+  nombre varchar(30),
+  edad tinyint,
+  domicilio varchar(30),
+  ciudad varchar(20),
+  montocompra decimal (6,2) not null
+ );
+
+3- Defina una restricción "default" para el campo "ciudad" que almacene el valor "Cordoba" en caso 
+de no ingresar valor para dicho campo:
+
+4- Defina una restricción "default" para el campo "montocompra" que almacene el valor "0" en caso de 
+no ingresar valor para dicho campo:
+
+5- Ingrese algunos registros sin valor para los campos con restricción "default":
+
+6- Vea cómo se almacenaron los registros:
+
+7- Vea las restricciones creadas anteriormente.
+
+8- Intente agregar otra restricción "default" al campo "ciudad".
+
+9- Intente establecer una restricción "default" al campo "identity".
