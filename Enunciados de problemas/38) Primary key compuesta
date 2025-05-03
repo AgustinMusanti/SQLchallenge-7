@@ -1,0 +1,25 @@
+Clave primaria compuesta
+
+Un consultorio médico en el cual trabajan 3 médicos registra las consultas de los pacientes en una 
+tabla llamada "consultas".
+
+1- Elimine la tabla si existe:
+
+2- La tabla contiene los siguientes datos:
+
+  - fechayhora: datetime not null, fecha y hora de la consulta,
+  - medico: varchar(30), not null, nombre del médico (Perez,Lopez,Duarte),
+  - documento: char(8) not null, documento del paciente,
+  - paciente: varchar(30), nombre del paciente,
+  - obrasocial: varchar(30), nombre de la obra social (IPAM,PAMI, etc.).
+
+Un médico sólo puede atender a un paciente en una fecha y hora determianada. En una fecha y hora 
+determinada, varios médicos atienden a distintos pacientes. Cree la tabla definiendo una clave 
+primaria compuesta:
+
+
+3- Ingrese varias consultas para un mismo médico en distintas horas el mismo día.
+
+4- Ingrese varias consultas para diferentes médicos en la misma fecha y hora.
+
+5- Intente ingresar una consulta para un mismo médico en la misma hora el mismo día.
