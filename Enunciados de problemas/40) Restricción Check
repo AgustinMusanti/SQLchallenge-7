@@ -1,0 +1,53 @@
+Restricción check
+
+Una empresa tiene registrados datos de sus empleados en una tabla llamada "empleados".
+
+1- Elimine la tabla si existe:
+
+2- Créela con la siguiente estructura:
+
+ create table empleados (
+  documento varchar(8),
+  nombre varchar(30),
+  fechanacimiento datetime,
+  cantidadhijos tinyint,
+  seccion varchar(20),
+  sueldo decimal(6,2)
+ );
+
+3- Agregue una restricción "check" para asegurarse que no se ingresen valores negativos para el 
+sueldo:
+
+4- Ingrese algunos registros válidos:
+
+('22222222','Alberto Lopez','1965/10/05',1,'Sistemas',1000);
+('33333333','Beatriz Garcia','1972/08/15',2,'Administracion',3000);
+('34444444','Carlos Caseres','1980/10/05',0,'Contaduría',6000);
+
+5- Intente agregar otra restricción "check" al campo sueldo para asegurar que ninguno supere el 
+valor 5000:
+
+6- Elimine el registro infractor y vuelva a crear la restricción:
+
+7- Establezca una restricción para controlar que la fecha de nacimiento que se ingresa no supere la 
+fecha actual:
+
+8- Establezca una restricción "check" para "seccion" que permita solamente los valores "Sistemas", 
+"Administracion" y "Contaduría":
+
+9- Establezca una restricción "check" para "cantidadhijos" que permita solamente valores entre 0 y 
+15.
+
+10- Vea todas las restricciones de la tabla:
+
+11- Intente agregar un registro que vaya contra alguna de las restricciones al campo "sueldo".
+
+12- Intente agregar un registro con fecha de nacimiento futura.
+
+13- Intente modificar un registro colocando en "cantidadhijos" el valor "21".
+
+14- Intente modificar el valor de algún registro en el campo "seccion" cambiándolo por uno que no 
+esté incluido en la lista de permitidos.
+
+15- Intente agregar una restricción al campo sección para aceptar solamente valores que comiencen 
+con la letra "B":
