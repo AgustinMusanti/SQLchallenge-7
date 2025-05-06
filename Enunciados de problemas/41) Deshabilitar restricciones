@@ -26,15 +26,15 @@ el sueldo:
 
 6- Deshabilite la restricción e ingrese el registro anterior:
 
-8- Establezca una restricción "check" para "seccion" que permita solamente los valores "Sistemas", 
+7- Establezca una restricción "check" para "seccion" que permita solamente los valores "Sistemas", 
 "Administracion" y "Contaduría":
 
-9- Establezca la restricción anterior evitando que se controlen los datos existentes.
+8- Establezca la restricción anterior evitando que se controlen los datos existentes.
 
-10- Vea si las restricciones de la tabla están o no habilitadas:
+9- Vea si las restricciones de la tabla están o no habilitadas:
 
-11- Habilite la restricción deshabilitada.
+10- Habilite la restricción deshabilitada.
 
-12- Intente modificar la sección del empleado "Carlos Caseres" a "Recursos".
+11- Intente modificar la sección del empleado "Carlos Caseres" a "Recursos".
 
-13- Deshabilite la restricción para poder realizar la actualización del punto precedente.
+12- Deshabilite la restricción para poder realizar la actualización del punto precedente.
