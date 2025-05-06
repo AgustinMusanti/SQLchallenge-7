@@ -1,0 +1,34 @@
+Restricción unique
+
+Una empresa de remises tiene registrada la información de sus vehículos en una tabla llamada 
+"remis".
+
+1- Elimine la tabla si existe:
+
+2- Cree la tabla con la siguiente estructura:
+
+ create table remis(
+  numero tinyint identity,
+  patente char(6),
+  marca varchar(15),
+  modelo char(4)
+ );
+
+3- Ingrese algunos registros:
+
+('ABC123','Renault clio','1990');
+('DEF456','Peugeot 504','1995');
+('DEF456','Fiat Duna','1998');
+('GHI789','Fiat Duna','1995');
+(null,'Fiat Duna','1995');
+
+4- Intente agregar una restricción "unique" para asegurarse que la patente del remis no tomará 
+valores repetidos.
+
+5- Elimine el registro con patente duplicada y establezca la restricción.
+
+6- Intente ingresar un registro con patente repetida.
+
+7- Intente ingresar un registro con valor nulo para el campo "patente".
+
+8- Muestre la información de las restricciones:
