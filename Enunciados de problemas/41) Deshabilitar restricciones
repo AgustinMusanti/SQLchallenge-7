@@ -1,0 +1,40 @@
+Deshabilitar restricciones (with check - nocheck)
+
+Una empresa tiene registrados datos de sus empleados en una tabla llamada "empleados".
+
+1- Elimine la tabla "empleados" (si existe):
+
+2- Créela con la siguiente estructura e ingrese los registros siguientes:
+
+ create table empleados (
+  documento varchar(8),
+  nombre varchar(30),
+  seccion varchar(20),
+  sueldo decimal(6,2)
+ );
+
+('22222222','Alberto Acosta','Sistemas',-10);
+('33333333','Beatriz Benitez','Recursos',3000);
+('34444444','Carlos Caseres','Contaduria',4000);
+
+3- Intente agregar una restricción "check" para asegurarse que no se ingresen valores negativos para 
+el sueldo:
+
+4- Vuelva a intentarlo agregando la opción "with nocheck":
+
+5- Intente ingresar un valor negativo para sueldo:
+
+6- Deshabilite la restricción e ingrese el registro anterior:
+
+8- Establezca una restricción "check" para "seccion" que permita solamente los valores "Sistemas", 
+"Administracion" y "Contaduría":
+
+9- Establezca la restricción anterior evitando que se controlen los datos existentes.
+
+10- Vea si las restricciones de la tabla están o no habilitadas:
+
+11- Habilite la restricción deshabilitada.
+
+12- Intente modificar la sección del empleado "Carlos Caseres" a "Recursos".
+
+13- Deshabilite la restricción para poder realizar la actualización del punto precedente.
