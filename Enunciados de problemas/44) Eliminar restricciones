@@ -1,0 +1,46 @@
+Eliminar restricciones (alter table - drop)
+
+Una playa de estacionamiento almacena cada día los datos de los vehículos que ingresan en la tabla 
+llamada "vehiculos".
+
+1- Elimine la tabla, si existe:
+
+2- Cree la tabla:
+
+ create table vehiculos(
+  patente char(6) not null,
+  tipo char(1),--'a'=auto, 'm'=moto
+  horallegada datetime not null,
+  horasalida datetime
+ );
+
+3- Establezca una restricción "check" que admita solamente los valores "a" y "m" para el campo 
+"tipo":
+
+4- Establezca una restricción "default" para el campo "tipo" que almacene el valor "a" en caso de no 
+ingresarse valor para dicho campo:
+
+5- Establezca una restricción "check" para el campo "patente" para que acepte 3 letras seguidas de 3 
+dígitos:
+
+6- Agregue una restricción "primary key" que incluya los campos "patente" y "horallegada":
+
+7- Ingrese un vehículo:
+
+('SDR456','a','2005/10/10 10:10',null);
+
+8- Intente ingresar un registro repitiendo la clave primaria:
+
+9- Ingrese un registro repitiendo la patente pero no la hora de llegada:
+
+10- Ingrese un registro repitiendo la hora de llegada pero no la patente:
+
+11- Vea todas las restricciones para la tabla "vehiculos":
+
+12- Elimine la restricción "default" del campo "tipo".
+
+13- Vea si se ha eliminado:
+
+14- Elimine la restricción "primary key" y "check".
+
+15- Vea si se han eliminado:
