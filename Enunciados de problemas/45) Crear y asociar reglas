@@ -24,10 +24,10 @@ llamada "vehiculos".
 
 4- Ingrese algunos registros:
 
- insert into vehiculos values ('AAA111','a','1990-02-01 08:10',null);
- insert into vehiculos values ('BCD222','m','1990-02-01 08:10','1990-02-01 10:10');
- insert into vehiculos values ('BCD222','m','1990-02-01 12:00',null);
- insert into vehiculos values ('CC1234','a','1990-02-01 12:00',null);
+('AAA111','a','1990-02-01 08:10',null);
+('BCD222','m','1990-02-01 08:10','1990-02-01 10:10');
+('BCD222','m','1990-02-01 12:00',null);
+('CC1234','a','1990-02-01 12:00',null);
 
 5- Cree una regla para restringir los valores que se pueden ingresar en un campo "patente" (3 letras 
 seguidas de 3 dígitos):
