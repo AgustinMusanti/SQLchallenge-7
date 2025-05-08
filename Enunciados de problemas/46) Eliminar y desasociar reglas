@@ -1,0 +1,59 @@
+Eliminar y dasasociar reglas (sp_unbindrule - drop rule)
+
+Una playa de estacionamiento almacena cada día los datos de los vehículos que ingresan en la tabla 
+llamada "vehiculos".
+
+1- Elimine la tabla, si existe:
+
+2- Elimine las siguientes reglas, si existen:
+
+('RG_patente_patron')
+('RG_vehiculos_tipo')
+('RG_vehiculos_tipo2')
+
+3- Cree la tabla:
+
+ create table vehiculos(
+  patente char(6) not null,
+  tipo char(1),--'a'=auto, 'm'=moto
+  horallegada datetime not null,
+  horasalida datetime
+ );
+
+4- Cree una regla para restringir los valores que se pueden ingresar en un campo "patente" (3 letras 
+seguidas de 3 dígitos):
+
+5-Asocie la regla al campo "patente":
+
+6- Intente ingresar un registro con valor para el campo "patente" que no cumpla con la regla:
+
+7- Cree otra regla que controle los valores para el campo "tipo" para que solamente puedan 
+ingresarse los caracteres "a" y "m":
+
+8- Asocie la regla al campo "tipo":
+
+9- Intente ingresar un registro con el valor 'c' para "tipo":
+
+10- Cree otra regla llamada "RG_vehiculos_tipo2" que controle los valores para el campo "tipo" para 
+que solamente puedan ingresarse los caracteres "a", "c" y "m":
+
+11- Si la asociamos a un campo que ya tiene asociada otra regla, la nueva regla reeemplaza la 
+asociación anterior. Asocie la regla creada en el punto anterior al campo "tipo".
+
+12- Ingrese el registro que no pudo ingresar en el punto 9.
+
+13- Intente eliminar la regla "RG_vehiculos_tipo2".
+
+14- Elimine la regla "RG_vehiculos_tipo".
+
+15- Intente eliminar la regla "RG_patente_patron".
+
+16- Quite la asociación de la regla con el campo "patente" de "vehiculos".
+
+17- Vea si la regla "RG_patente_patron" está asociada a algún campo de "vehiculos".
+
+18- Verifique que la regla aún existe en la base de datos activa:
+
+19- Elimine la regla que no pudo eliminar en el punto 15.
+
+20- Verifique que la regla ya no existe en la base de datos activa.
