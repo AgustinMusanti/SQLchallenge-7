@@ -60,28 +60,71 @@ EXEC sp_bindefault VP_legajo_patron,'clientes.legajo';
 
 CREATE DEFAULT VP_datodesconocido
 AS'??';
-9- Asócielo al campo "domicilio".
 
-10- Asócielo al campo "ciudad".
+-- 9- Asócielo al campo "domicilio".
 
-11- Ingrese un registro con valores por defecto para los campos "domicilio" y "ciudad" y vea qué 
-almacenaron.
+EXEC sp_bindefault VP_datodesconocido,'clientes.domicilio';
 
-12- Intente asociar el valor predeterminado "VP_datodesconocido" al campo "provincia".
+-- 10- Asócielo al campo "ciudad".
 
-13- Cree un valor predeterminado con la fecha actual llamado "VP_fechaactual".
+EXEC sp_bindefault VP_datodesconocido,'clientes.ciudad';
 
-14- Asócielo al campo "fechaingreso".
+/* 11- Ingrese un registro con valores por defecto para los campos "domicilio" y "ciudad" y vea qué 
+       almacenaron. */
 
-15- Ingrese algunos registros para ver cómo se almacenan los valores para los cuales no se insertan 
-datos.
+INSERT INTO clientes 
+VALUES('GF12','Ana Perez',default,default,'Cordoba','2001-10-10');
 
-16- Asocie el valor predeterminado "VP_datodesconocido" al campo "fechaingreso".
+SELECT * FROM clientes;
 
-17- Ingrese un registro con valores por defecto.
+-- 12- Intente asociar el valor predeterminado "VP_datodesconocido" al campo "provincia".
 
-18- Cree una regla que entre en conflicto con el valor predeterminado "VP_legajo_patron".
+EXEC sp_bindefault VP_datodesconocido,'clientes.provincia';
 
-19- Asocie la regla al campo "legajo".
+-- No se puede.
 
-20- Intente ingresar un registro con el valor "default" para el campo "legajo".
+-- 13- Cree un valor predeterminado con la fecha actual llamado "VP_fechaactual".
+
+CREATE DEFAULT VP_fechaactual
+AS GETDATE();
+
+-- 14- Asócielo al campo "fechaingreso".
+
+EXEC sp_bindefault VP_fechaactual,'clientes.fechaingreso';
+
+/* 15- Ingrese algunos registros para ver cómo se almacenan los valores para los cuales no se insertan 
+       datos. */
+
+INSERT INTO clientes
+DEFAULT VALUES;
+
+SELECT * FROM clientes;
+
+-- 16- Asocie el valor predeterminado "VP_datodesconocido" al campo "fechaingreso".
+
+EXEC sp_bindefault VP_datodesconocido,'clientes.fechaingreso';
+
+-- 17- Ingrese un registro con valores por defecto.
+
+INSERT INTO clientes
+DEFAULT VALUES;
+
+SELECT * FROM clientes;
+
+-- No se puede por la asociacion de "??" con valor de fecha
+
+-- 18- Cree una regla que entre en conflicto con el valor predeterminado "VP_legajo_patron".
+
+CREATE RULE RG_legajo
+AS @valor LIKE 'B%';
+
+-- 19- Asocie la regla al campo "legajo".
+
+EXEC sp_bindrule RG_legajo,'clientes.legajo';
+
+-- 20- Intente ingresar un registro con el valor "default" para el campo "legajo".
+
+INSERT INTO clientes 
+VALUES(default,'Luis Garcia','Colon 876','Cordoba','Cordoba','2001-10-10');
+
+SELECT * FROM clientes;
