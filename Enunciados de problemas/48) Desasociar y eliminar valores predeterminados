@@ -1,0 +1,67 @@
+Desasociar y eliminar valores predeterminados
+
+Una librería almacena los datos de sus libros en una tabla llamada "libros".
+
+1- Elimine la tabla si existe:
+
+2- Elimine los valores predeterminados:
+
+('VP_cero')
+('VP_desconocido')
+('RG_positivo')
+
+3- Cree la tabla:
+
+ create table libros(
+  codigo int identity,
+  titulo varchar(40) not null,
+  autor varchar(30),
+  editorial varchar(20),
+  precio decimal(5,2),
+  cantidad smallint
+ );
+
+4- Cree una regla para impedir que se ingresen valores negativos, llamada "RG_positivo".
+
+5- Asocie la regla al campo "precio".
+
+6- Asocie la regla al campo "cantidad".
+
+7- Cree un valor predeterminado para que almacene el valor cero, llamado "VP_cero".
+
+8- Asócielo al campo "precio".
+
+9- Asócielo al campo "cantidad".
+
+10- Cree un valor predeterminado con la cadena "Desconocido" llamado "VP_desconocido".
+
+11- Asócielo al campo "autor".
+
+12- Asócielo al campo "editorial".
+
+13- Vea las reglas y valores predeterminados con "sp_help":
+
+14- Vea las reglas y valores predeterminados asociados a "libros".
+
+15- Ingrese un registro con valores por defecto para todos los campos, excepto "titulo" y vea qué se 
+almacenó.
+
+15- Quite la asociación del valor predeterminado "VP_cero" al campo "precio".
+
+16- Ingrese otro registro con valor predeterminado para el campo "precio" y vea cómo se almacenó.
+
+17- Vea las reglas y valores predeterminados asociados a "libros".
+
+18- Verifique que el valor predeterminado "VP_cero" existe aún en la base de datos.
+
+19- Intente eliminar el valor predeterminado "VP_cero".
+
+20- Quite la asociación del valor predeterminado "VP_cero" al campo "cantidad".
+
+21- Verifique que ya no existe asociación de este valor predeterminado con la tabla "libros".
+
+22- Verifique que el valor predeterminado "VP_cero" aun existe en la base de datos.
+
+23- Elimine el valor predeterminado "VP_cero".
+
+24- Verifique que ya no existe en la base de datos.
