@@ -1,0 +1,52 @@
+Regenerar índices
+
+Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
+
+1- Elimine la tabla si existe y créela con la siguiente estructura:
+
+ create table alumnos(
+  legajo char(5) not null,
+  documento char(8) not null,
+  apellido varchar(30),
+  nombre varchar(30),
+  notafinal decimal(4,2)
+ );
+
+2- Cree un índice no agrupado para el campo "apellido".
+
+3- Vea la información de los índices de "alumnos".
+
+4- Modifíquelo agregando el campo "nombre".
+
+5- Verifique que se modificó:
+
+6- Establezca una restricción "unique" para el campo "documento".
+
+7- Vea la información que muestra "sp_helpindex":
+
+8- Intente modificar con "drop_existing" alguna característica del índice que se creó 
+automáticamente al agregar la restricción "unique":
+
+9- Cree un índice no agrupado para el campo "legajo".
+
+10- Muestre todos los índices:
+
+11- Convierta el índice creado en el punto 9 a agrupado conservando las demás características.
+
+12- Verifique que se modificó:
+
+13- Intente convertir el índice "I_alumnos_legajo" a no agrupado:
+
+14- Modifique el índice "I_alumnos_apellido" quitándole el campo "nombre".
+
+15- Intente convertir el índice "I_alumnos_apellido" en agrupado:
+
+16- Modifique el índice "I_alumnos_legajo" para que sea único y conserve todas las otras 
+características.
+
+17- Verifique la modificación:
+
+18- Modifique nuevamente el índice "I_alumnos_legajo" para que no sea único y conserve las demás 
+características.
+
+19- Verifique la modificación:
