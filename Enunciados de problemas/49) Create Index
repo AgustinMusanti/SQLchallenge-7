@@ -1,0 +1,58 @@
+Creación de índices
+
+Un profesor guarda algunos datos de sus alumnos en una tabla llamada "alumnos".
+
+1- Elimine la tabla si existe y créela con la siguiente estructura:
+
+ create table alumnos(
+  legajo char(5) not null,
+  documento char(8) not null,
+  apellido varchar(30),
+  nombre varchar(30),
+  notafinal decimal(4,2)
+ );
+
+2- Ingresamos algunos registros:
+
+('A123','22222222','Perez','Patricia',5.50);
+('A234','23333333','Lopez','Ana',9);
+('A345','24444444','Garcia','Carlos',8.5);
+('A348','25555555','Perez','Daniela',7.85);
+('A457','26666666','Perez','Fabian',3.2);
+('A589','27777777','Gomez','Gaston',6.90);
+
+3- Intente crear un índice agrupado único para el campo "apellido".
+
+4- Cree un índice agrupado, no único, para el campo "apellido".
+
+5- Intente establecer una restricción "primary key" al campo "legajo" especificando que cree un 
+índice agrupado.
+
+6- Establezca la restricción "primary key" al campo "legajo" especificando que cree un índice NO 
+agrupado.
+
+7- Vea los índices de "alumnos":
+
+8- Analice la información que muestra "sp_helpconstraint":
+
+9- Cree un índice unique no agrupado para el campo "documento".
+
+10- Intente ingresar un alumno con documento duplicado.
+
+11- Veamos los indices de "alumnos".
+
+12- Cree un índice compuesto para el campo "apellido" y "nombre".
+
+13- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados para 
+"alumnos":
+
+14- Cree una restricción unique para el campo "documento".
+
+15- Vea la información de "sp_helpconstraint".
+
+16- Vea los índices de "alumnos".
+
+17- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados para 
+"alumnos":
+
+18- Consulte la tabla "sysindexes", para ver los nombres de todos los índices creados por usted:
