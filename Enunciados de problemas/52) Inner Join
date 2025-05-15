@@ -1,0 +1,43 @@
+Combinación interna (inner join)
+
+Una empresa tiene registrados sus clientes en una tabla llamada "clientes", también tiene una tabla 
+"provincias" donde registra los nombres de las provincias.
+
+1- Elimine las tablas "clientes" y "provincias", si existen:
+
+2- Créelas con las siguientes estructuras:
+
+ create table clientes (
+  codigo int identity,
+  nombre varchar(30),
+  domicilio varchar(30),
+  ciudad varchar(20),
+  codigoprovincia tinyint not null,
+  primary key(codigo)
+ );
+
+ create table provincias(
+  codigo tinyint identity,
+  nombre varchar(20),
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros para ambas tablas:
+
+('Cordoba');
+('Santa Fe');
+('Corrientes');
+
+('Lopez Marcos','Colon 111','Córdoba',1);
+('Perez Ana','San Martin 222','Cruz del Eje',1);
+('Garcia Juan','Rivadavia 333','Villa Maria',1);
+('Perez Luis','Sarmiento 444','Rosario',2);
+('Pereyra Lucas','San Martin 555','Cruz del Eje',1);
+('Gomez Ines','San Martin 666','Santa Fe',2);
+('Torres Fabiola','Alem 777','Ibera',3);
+
+4- Obtenga los datos de ambas tablas, usando alias:
+
+5- Obtenga la misma información anterior pero ordenada por nombre de provincia.
+
+6- Recupere los clientes de la provincia "Santa Fe"
