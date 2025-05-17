@@ -1,0 +1,36 @@
+Combinaciones cruzadas (cross join)
+
+Una agencia matrimonial almacena la información de sus clientes de sexo femenino en una tabla 
+llamada "mujeres" y en otra la de sus clientes de sexo masculino llamada "varones".
+
+1- Elimine las tablas si existen y créelas:
+
+ create table mujeres(
+  nombre varchar(30),
+  domicilio varchar(30),
+  edad int
+ );
+ 
+ create table varones(
+  nombre varchar(30),
+  domicilio varchar(30),
+  edad int
+ );
+
+2- Ingrese los siguientes registros:
+
+('Maria Lopez','Colon 123',45);
+('Liliana Garcia','Sucre 456',35);
+('Susana Lopez','Avellaneda 98',41);
+
+('Juan Torres','Sarmiento 755',44);
+('Marcelo Oliva','San Martin 874',56);
+('Federico Pereyra','Colon 234',38);
+('Juan Garcia','Peru 333',50);
+
+3- La agencia necesita la combinación de todas las personas de sexo femenino con las de sexo 
+masculino. Use un "cross join".
+
+4- Realice la misma combinación pero considerando solamente las personas mayores de 40 años.
+
+5- Forme las parejas pero teniendo en cuenta que no tengan una diferencia superior a 10 años.
