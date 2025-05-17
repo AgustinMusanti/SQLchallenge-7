@@ -1,0 +1,50 @@
+Combinación externa completa (full join)
+
+Un club dicta clases de distintos deportes. Almacena la información en una tabla llamada "deportes" 
+en la cual incluye el nombre del deporte y el nombre del profesor y en otra tabla llamada 
+"inscriptos" que incluye el documento del socio que se inscribe, el deporte y si la matricula está 
+paga o no.
+
+1- Elimine las tablas si existen y cree las tablas:
+
+ create table deportes(
+  codigo tinyint identity,
+  nombre varchar(30),
+  profesor varchar(30),
+  primary key (codigo)
+ );
+ 
+ create table inscriptos(
+  documento char(8),
+  codigodeporte tinyint not null,
+  matricula char(1) --'s'=paga 'n'=impaga
+ );
+
+2- Ingrese algunos registros para ambas tablas:
+
+('tenis','Marcelo Roca');
+('natacion','Marta Torres');
+('basquet','Luis Garcia');
+('futbol','Marcelo Roca');
+ 
+('22222222',3,'s');
+('23333333',3,'s');
+('24444444',3,'n');
+('22222222',2,'s');
+('23333333',2,'s');
+('22222222',4,'n'); 
+('22222222',5,'n'); 
+
+3- Muestre todos la información de la tabla "inscriptos", y consulte la tabla "deportes" para 
+obtener el nombre de cada deporte.
+
+4- Empleando un "left join" con "deportes" obtenga todos los datos de los inscriptos.
+
+5- Obtenga la misma salida anterior empleando un "rigth join".
+
+6- Muestre los deportes para los cuales no hay inscriptos, empleando un "left join".
+
+7- Muestre los documentos de los inscriptos a deportes que no existen en la tabla "deportes".
+
+8- Emplee un "full join" para obtener todos los datos de ambas tablas, incluyendo las inscripciones 
+a deportes inexistentes en "deportes" y los deportes que no tienen inscriptos.
