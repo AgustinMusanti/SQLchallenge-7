@@ -1,0 +1,31 @@
+Autocombinación
+
+Una agencia matrimonial almacena la información de sus clientes en una tabla llamada "clientes".
+
+1- Elimine la tabla si existe y créela:
+
+ create table clientes(
+  nombre varchar(30),
+  sexo char(1),--'f'=femenino, 'm'=masculino
+  edad int,
+  domicilio varchar(30)
+ );
+
+
+2- Ingrese los siguientes registros:
+
+('Maria Lopez','f',45,'Colon 123');
+('Liliana Garcia','f',35,'Sucre 456');
+('Susana Lopez','f',41,'Avellaneda 98');
+('Juan Torres','m',44,'Sarmiento 755');
+('Marcelo Oliva','m',56,'San Martin 874');
+('Federico Pereyra','m',38,'Colon 234');
+('Juan Garcia','m',50,'Peru 333');
+
+3- La agencia necesita la combinación de todas las personas de sexo femenino con las de sexo 
+masculino. Use un  "cross join".
+
+4- Obtenga la misma salida enterior pero realizando un "join".
+
+5- Realice la misma autocombinación que el punto 3 pero agregue la condición que las parejas no 
+tengan una diferencia superior a 5 años.
