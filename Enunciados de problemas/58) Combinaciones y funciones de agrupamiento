@@ -1,0 +1,47 @@
+Combinaciones y funciones de agrupamiento
+
+Un comercio que tiene un stand en una feria registra en una tabla llamada "visitantes" algunos datos 
+de las personas que visitan o compran en su stand para luego enviarle publicidad de sus productos y 
+en otra tabla llamada "ciudades" los nombres de las ciudades.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas:
+
+ create table visitantes(
+  nombre varchar(30),
+  edad tinyint,
+  sexo char(1) default 'f',
+  domicilio varchar(30),
+  codigociudad tinyint not null,
+  mail varchar(30),
+  montocompra decimal (6,2)
+ );
+
+ create table ciudades(
+  codigo tinyint identity,
+  nombre varchar(20)
+ );
+ 
+3- Ingrese algunos registros:
+
+('Cordoba');
+('Carlos Paz');
+('La Falda');
+('Cruz del Eje');
+
+('Susana Molina', 35,'f','Colon 123', 1, null,59.80);
+('Marcos Torres', 29,'m','Sucre 56', 1, 'marcostorres@hotmail.com',150.50);
+('Mariana Juarez', 45,'f','San Martin 111',2,null,23.90);
+('Fabian Perez',36,'m','Avellaneda 213',3,'fabianperez@xaxamail.com',0);
+('Alejandra Garcia',28,'f',null,2,null,280.50);
+('Gaston Perez',29,'m',null,5,'gastonperez1@gmail.com',95.40);
+('Mariana Juarez',33,'f',null,2,null,90);
+
+4- Cuente la cantidad de visitas por ciudad mostrando el nombre de la ciudad.
+
+5- Muestre el promedio de gastos de las visitas agrupados por ciudad y sexo.
+
+6- Muestre la cantidad de visitantes con mail, agrupados por ciudad.
+
+7- Obtenga el monto de compra más alto de cada ciudad.
