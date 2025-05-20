@@ -1,0 +1,78 @@
+Combinación de más de dos tablas
+
+Un club dicta clases de distintos deportes. En una tabla llamada "socios" guarda los datos de los 
+socios, en una tabla llamada "deportes" la información referente a los diferentes deportes que se 
+dictan y en una tabla denominada "inscriptos", las inscripciones de los socios a los distintos 
+deportes.
+Un socio puede inscribirse en varios deportes el mismo año. Un socio no puede inscribirse en el 
+mismo deporte el mismo año. Distintos socios se inscriben en un mismo deporte en el mismo año.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas con las siguientes estructuras:
+
+ create table socios(
+  documento char(8) not null, 
+  nombre varchar(30),
+  domicilio varchar(30),
+  primary key(documento)
+ );
+ 
+ create table deportes(
+  codigo tinyint identity,
+  nombre varchar(20),
+  profesor varchar(15),
+  primary key(codigo)
+ );
+ 
+ create table inscriptos(
+  documento char(8) not null, 
+  codigodeporte tinyint not null,
+  anio char(4),
+  matricula char(1),--'s'=paga, 'n'=impaga
+  primary key(documento,codigodeporte,anio)
+ );
+
+3- Ingrese algunos registros en "socios":
+
+('22222222','Ana Acosta','Avellaneda 111');
+('23333333','Betina Bustos','Bulnes 222');
+('24444444','Carlos Castro','Caseros 333');
+('25555555','Daniel Duarte','Dinamarca 44');
+
+4- Ingrese algunos registros en "deportes":
+
+('basquet','Juan Juarez');
+('futbol','Pedro Perez');
+('natacion','Marina Morales');
+('tenis','Marina Morales');
+
+5- Inscriba a varios socios en el mismo deporte en el mismo año:
+
+('22222222',3,'2006','s');
+('23333333',3,'2006','s');
+('24444444',3,'2006','n');
+
+6- Inscriba a un mismo socio en el mismo deporte en distintos años:
+
+('22222222',3,'2005','s');
+('22222222',3,'2007','n');
+
+7- Inscriba a un mismo socio en distintos deportes el mismo año:
+
+('24444444',1,'2006','s');
+('24444444',2,'2006','s');
+
+8- Ingrese una inscripción con un código de deporte inexistente y un documento de socio que no 
+exista en "socios":
+
+('26666666',0,'2006','s');
+
+9- Muestre el nombre del socio, el nombre del deporte en que se inscribió y el año empleando 
+diferentes tipos de join.
+
+10- Muestre todos los datos de las inscripciones (excepto los códigos) incluyendo aquellas 
+inscripciones cuyo código de deporte no existe en "deportes" y cuyo documento de socio no se 
+encuentra en "socios".
+
+11- Muestre todas las inscripciones del socio con documento "22222222".
