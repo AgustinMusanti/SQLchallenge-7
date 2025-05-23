@@ -1,0 +1,44 @@
+Restricciones foreign key en la misma tabla
+
+Una empresa registra los datos de sus clientes en una tabla llamada "clientes". Dicha tabla contiene 
+un campo que hace referencia al cliente que lo recomendó denominado "referenciadopor". Si un cliente 
+no ha sido referenciado por ningún otro cliente, tal campo almacena "null".
+
+1- Elimine la tabla si existe y créela:
+
+ create table clientes(
+  codigo int not null,
+  nombre varchar(30),
+  domicilio varchar(30),
+  ciudad varchar(20),
+  referenciadopor int,
+  primary key(codigo)
+ );
+
+2- Ingresamos algunos registros:
+
+(50,'Juan Perez','Sucre 123','Cordoba',null);
+(90,'Marta Juarez','Colon 345','Carlos Paz',null);
+(110,'Fabian Torres','San Martin 987','Cordoba',50);
+(125,'Susana Garcia','Colon 122','Carlos Paz',90);
+(140,'Ana Herrero','Colon 890','Carlos Paz',9);
+
+3- Intente agregar una restricción "foreign key" para evitar que en el campo "referenciadopor" se 
+ingrese un valor de código de cliente que no exista.
+
+4- Cambie el valor inválido de "referenciadopor" del registro que viola la restricción por uno 
+válido.
+
+5- Agregue la restricción "foreign key" que intentó agregar en el punto 3.
+
+6- Vea la información referente a las restricciones de la tabla "clientes".
+
+7- Intente agregar un registro que infrinja la restricción.
+
+8- Intente modificar el código de un cliente que está referenciado en "referenciadopor".
+
+9- Intente eliminar un cliente que sea referenciado por otro en "referenciadopor".
+
+10- Cambie el valor de código de un cliente que no referenció a nadie.
+
+11- Elimine un cliente que no haya referenciado a otros.
