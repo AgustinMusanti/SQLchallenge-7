@@ -1,0 +1,48 @@
+Restricciones foreign key (acciones)
+
+Una empresa tiene registrados sus clientes en una tabla llamada "clientes", también tiene una tabla 
+"provincias" donde registra los nombres de las provincias.
+
+1- Elimine las tablas "clientes" y "provincias", si existen:
+
+2- Créelas con las siguientes estructuras:
+
+ create table clientes (
+  codigo int identity,
+  nombre varchar(30),
+  domicilio varchar(30),
+  ciudad varchar(20),
+  codigoprovincia tinyint,
+  primary key(codigo)
+ );
+
+ create table provincias(
+  codigo tinyint,
+  nombre varchar(20),
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros para ambas tablas:
+
+(1,'Cordoba');
+(2,'Santa Fe');
+(3,'Misiones');
+(4,'Rio Negro');
+
+('Perez Juan','San Martin 123','Carlos Paz',1);
+('Moreno Marcos','Colon 234','Rosario',2);
+('Acosta Ana','Avellaneda 333','Posadas',3);
+
+4- Establezca una restricción "foreign key" especificando la acción "en cascade" para 
+actualizaciones y "no action" para eliminaciones.
+
+5- Intente eliminar el registro con código 3, de "provincias".
+
+6- Modifique el registro con código 3, de "provincias".
+
+7- Verifique que el cambio se realizó en cascada, es decir, que se modificó en la tabla "provincias" 
+y en "clientes":
+
+8- Intente modificar la restricción "foreign key" para que permita eliminación en cascada.
+
+9- Intente eliminar la tabla "provincias".
