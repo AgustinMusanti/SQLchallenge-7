@@ -1,0 +1,72 @@
+Restricciones foreign key deshabilitar y eliminar (with check - nocheck)
+
+Una empresa tiene registrados sus clientes en una tabla llamada "clientes", también tiene una tabla 
+"provincias" donde registra los nombres de las provincias.
+
+1- Elimine las tablas "clientes" y "provincias", si existen:
+
+2- Créelas con las siguientes estructuras:
+
+ create table clientes (
+  codigo int identity,
+  nombre varchar(30),
+  domicilio varchar(30),
+  ciudad varchar(20),
+  codigoprovincia tinyint,
+  primary key(codigo)
+ );
+
+ create table provincias(
+  codigo tinyint,
+  nombre varchar(20),
+  primary key (codigo)
+ );
+
+3- Ingrese algunos registros para ambas tablas:
+
+4- Intente agregar una restricción "foreign key" para que los códigos de provincia de "clientes" 
+existan en "provincias" con acción en cascada para actualizaciones y eliminaciones, sin especificar 
+la opción de comprobación de datos:
+
+5- Agregue la restricción anterior pero deshabilitando la comprobación de datos existentes:
+ alter table clientes.
+
+6- Vea las restricciones de "clientes":
+
+7- Vea las restricciones de "provincias":
+
+8- Deshabilite la restricción "foreign key" de "clientes":
+
+9- Vea las restricciones de "clientes":
+
+10- Vea las restricciones de "provincias":
+
+11- Agregue un registro que no cumpla la restricción "foreign key":
+
+12- Elimine una provincia de las cuales haya clientes:
+
+13- Corrobore que el registro se eliminó de "provincias" pero no se extendió a "clientes":
+
+14- Modifique un código de provincia de la cual haya clientes:
+
+15- Verifique que el cambio se realizó en "provincias" pero no se extendió a "clientes":
+
+16- Intente eliminar la tabla "provincias":
+
+17- Habilite la restricción "foreign key".
+
+18- Intente agregar un cliente con código de provincia inexistente en "provincias":
+
+19- Modifique un código de provincia al cual se haga referencia en "clientes":
+
+20- Vea que se modificaron en ambas tablas:
+
+21- Elimine una provincia de la cual haya referencia en "clientes":
+
+22- Vea que los registros de ambas tablas se eliminaron:
+
+23- Elimine la restriccion "foreign key":
+
+24- Vea las restriciones de la tabla "provincias":
+
+25- Elimine la tabla "provincias":
