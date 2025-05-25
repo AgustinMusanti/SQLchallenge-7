@@ -29,7 +29,6 @@ existan en "provincias" con acción en cascada para actualizaciones y eliminacio
 la opción de comprobación de datos:
 
 5- Agregue la restricción anterior pero deshabilitando la comprobación de datos existentes:
- alter table clientes.
 
 6- Vea las restricciones de "clientes":
 
