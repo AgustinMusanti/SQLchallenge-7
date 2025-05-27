@@ -1,0 +1,133 @@
+Restricciones al crear la tabla
+
+Un club de barrio tiene en su sistema 4 tablas:
+
+- "socios": en la cual almacena documento, número, nombre y domicilio de cada socio;
+- "deportes": que guarda un código, nombre del deporte, día de la semana que se dicta y documento 
+del profesor instructor;
+- "profesores": donde se guarda el documento, nombre y domicilio de los profesores e
+- "inscriptos": que almacena el número de socio, el código de deporte y si la matricula está paga o 
+no.
+
+1- Elimine las tablas si existen:
+
+2- Considere que:
+
+- un socio puede inscribirse en varios deportes, pero no dos veces en el mismo.
+- un socio tiene un documento único y un número de socio único.
+- el documento del socio debe contener 8 dígitos.
+- un deporte debe tener asignado un profesor que exista en "profesores" o "null" si aún no tiene un 
+  instructor definido.
+- el campo "dia" de "deportes" puede ser: lunes, martes, miercoles, jueves, viernes o sabado.
+- el campo "dia" de "deportes" por defecto debe almacenar 'sabado'.
+- un profesor puede ser instructor de varios deportes o puede no dictar ningún deporte.
+- un profesor no puede estar repetido en "profesores".
+- el documento del profesor debe contener 8 dígitos.
+- un inscripto debe ser socio, un socio puede no estar inscripto en ningún deporte.
+- una inscripción debe tener un valor en socio existente en "socios" y un deporte que exista en 
+  "deportes".
+- el campo "matricula" de "inscriptos" debe aceptar solamente los caracteres 's' o 'n'.
+
+3- Cree las tablas con las restricciones necesarias:
+
+ create table profesores(
+  documento char(8) not null,
+  nombre varchar(30),
+  domicilio varchar(30),
+  constraint CK_profesores_documento_patron check (documento like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+  constraint PK_profesores_documento
+   primary key (documento)
+ );
+
+ create table deportes(
+  codigo tinyint identity,
+  nombre varchar(20) not null,
+  dia varchar(30)
+   constraint DF_deportes_dia default('sabado'),
+  profesor char(8),--documento del profesor
+  constraint CK_deportes_dia_lista check (dia in ('lunes','martes','miercoles','jueves','viernes','sabado')),
+  constraint PK_deportes_codigo
+   primary key (codigo)
+ );
+
+ create table socios(
+  numero int identity,
+  documento char(8),
+  nombre varchar(30),
+  domicilio varchar(30),
+  constraint CK_documento_patron check (documento like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+  constraint PK_socios_numero
+   primary key nonclustered(numero),
+  constraint UQ_socios_documento
+   unique clustered(documento)
+ );
+
+ create table inscriptos(
+  numerosocio int not null,
+  codigodeporte tinyint,
+  matricula char(1),
+  constraint PK_inscriptos_numerodeporte
+   primary key clustered (numerosocio,codigodeporte),
+  constraint FK_inscriptos_deporte
+   foreign key (codigodeporte)
+   references deportes(codigo)
+   on update cascade,
+  constraint FK_inscriptos_socios
+   foreign key (numerosocio)
+   references socios(numero)
+   on update cascade
+   on delete cascade,
+  constraint CK_matricula_valores check (matricula in ('s','n'))
+);
+
+4- Ingrese registros en "profesores":
+
+('21111111','Andres Acosta','Avellaneda 111');
+('22222222','Betina Bustos','Bulnes 222');
+('23333333','Carlos Caseros','Colon 333');
+
+5- Ingrese registros en "deportes". Ingrese el mismo día para distintos deportes, un deporte sin día 
+   confirmado, un deporte sin profesor definido:
+   
+('basquet','lunes',null);
+('futbol','lunes','23333333');
+('natacion',null,'22222222');
+('padle',default,'23333333');
+('tenis','jueves');
+
+6- Ingrese registros en "socios":
+
+('30111111','Ana Acosta','America 111');
+('30222222','Bernardo Bueno','Bolivia 222');
+('30333333','Camila Conte','Caseros 333');
+('30444444','Daniel Duarte','Dinamarca 444');
+
+7- Ingrese registros en "inscriptos". Inscriba a un socio en distintos deportes, inscriba varios 
+   socios en el mismo deporte.
+
+(1,3,'s');
+(1,5,'s');
+(2,1,'s');
+(4,1,'n');
+(4,4,'s');
+
+8- Realice un "join" (del tipo que sea necesario) para mostrar todos los datos del socio junto con 
+el nombre de los deportes en los cuales está inscripto, el día que tiene que asistir y el nombre del 
+profesor que lo instruirá.
+
+9- Realice la misma consulta anterior pero incluya los socios que no están inscriptos en ningún 
+deporte.
+
+10- Muestre todos los datos de los profesores, incluido el deporte que dicta y el día, incluyendo 
+los profesores que no tienen asignado ningún deporte.
+
+11- Muestre todos los deportes y la cantidad de inscriptos, incluyendo aquellos deportes para los 
+cuales no hay inscriptos.
+
+12- Muestre las restricciones de "socios".
+
+13- Muestre las restricciones de "deportes".
+
+14- Muestre las restricciones de "profesores".
+
+15- Muestre las restricciones de "inscriptos".
