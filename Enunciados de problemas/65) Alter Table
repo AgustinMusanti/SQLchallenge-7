@@ -1,0 +1,36 @@
+Agregar y eliminar campos ( alter table - add - drop)
+
+Trabaje con una tabla llamada "empleados".
+
+1- Elimine la tabla, si existe, créela y cargue un registro:
+
+ create table empleados(
+  apellido varchar(20),
+  nombre varchar(20),
+  domicilio varchar(30),
+  fechaingreso datetime
+ );
+ 
+('Rodriguez','Pablo');
+
+2- Agregue el campo "sueldo", de tipo decimal(5,2).
+
+3- Verifique que la estructura de la tabla ha cambiado.
+
+4- Agregue un campo "codigo", de tipo int con el atributo "identity".
+
+5- Intente agregar un campo "documento" no nulo.
+
+6- Agregue el campo del punto anterior especificando un valor por defecto:
+
+7- Verifique que la estructura de la tabla ha cambiado.
+
+8- Elimine el campo "sueldo".
+
+9- Verifique la eliminación:
+
+10- Intente eliminar el campo "documento".
+
+11- Elimine los campos "codigo" y "fechaingreso" en una sola sentencia.
+
+12- Verifique la eliminación de los campos:
