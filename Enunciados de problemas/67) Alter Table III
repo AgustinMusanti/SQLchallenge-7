@@ -1,0 +1,33 @@
+Agregar campos y restricciones (alter table)
+
+Trabaje con una tabla llamada "empleados".
+
+1- Elimine la tabla, si existe y créela:
+
+ create table empleados(
+  documento char(8) not null,
+  nombre varchar(10),
+  domicilio varchar(30),
+  ciudad varchar(20) default 'Buenos Aires'
+ );
+
+2- Agregue el campo "legajo" de tipo int identity y una restricción "primary key":
+
+3- Vea si la estructura cambió y si se agregó la restricción:
+
+4- Agregue el campo "hijos" de tipo tinyint y en la misma sentencia una restricción "check" que no 
+permita valores superiores a 30:
+
+5- Ingrese algunos registros:
+
+6- Intente agregar el campo "sueldo" de tipo decimal(6,2) no nulo y una restricción "check" que no 
+permita valores negativos para dicho campo:
+
+7- Agregue el campo "sueldo" de tipo decimal(6,2) no nulo, una restricción "check" que no permita 
+valores negativos para dicho campo y una restricción "default" que almacene el valor "0":
+
+8- Recupere los registros:
+
+9- Vea la nueva estructura de la tabla:
+
+10- Vea las restricciones:
