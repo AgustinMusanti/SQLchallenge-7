@@ -1,0 +1,29 @@
+Campos calculados
+
+Un comercio almacena los datos de los artículos para la venta en una tabla denominada "articulos".
+
+1- Elimine la tabla, si existe y créela nuevamente:
+
+ create table articulos(
+  codigo int identity,
+  descripcion varchar(30),
+  precio decimal(5,2) not null,
+  cantidad smallint not null default 0,
+  montototal as precio*cantidad
+ );
+
+2- Intente ingresar un registro con valor para el campo calculado:
+
+3- Ingrese algunos registros:
+
+('birome',1.5,100);
+('cuaderno 12 hojas',4.8,150);
+('lapices x 12',5,200);
+
+4- Recupere los registros:
+
+5- Actualice un precio y recupere los registros:
+
+6- Actualice una cantidad y vea el resultado:
+
+7- Intente actualizar un campo calculado:
