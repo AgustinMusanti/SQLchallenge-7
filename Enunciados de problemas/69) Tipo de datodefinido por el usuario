@@ -1,0 +1,21 @@
+Tipo de dato definido por el usuario (crear - informacion)
+
+Un comercio almacena los datos de sus empleados en una tabla denominada "empleados".
+
+1- Elimine la tabla si existe:
+
+2- Defina un nuevo tipo de dato llamado "tipo_legajo". Primero debe eliminarlo (si existe) para 
+volver a crearlo:
+
+3- Cree un tipo de dato definido por el usuario llamado "tipo_legajo" basado en el tipo "char" de 4 
+caracteres que no permita valores nulos.
+
+4- Ejecute el procedimiento almacenado "sp_help" junto al nombre del tipo de dato definido 
+anteriormente para obtener información del mismo.
+
+5- Cree la tabla "empleados" con 3 campos: legajo (tipo_legajo), documento (char de 8) y nombre (30 
+caracteres):
+
+6- Intente ingresar un registro con valores por defecto:
+
+7- Ingrese un registro con valores válidos.
