@@ -1,0 +1,63 @@
+Tipo de dato definido por el usuario (asociación de reglas)
+
+Un comercio almacena los datos de sus empleados en una tabla denominada "empleados" y en otra 
+llamada "clientes" los datos de sus clientes".
+
+1- Elimine ambas tablas, si existen:
+
+2- Defina un nuevo tipo de dato llamado "tipo_año". Primero debe eliminarlo, si existe, para volver 
+a crearlo:
+
+3- Cree un tipo de dato definido por el usuario llamado "tipo_año" basado en el tipo "int" que 
+permita valores nulos:
+
+4- Ejecute el procedimiento almacenado "sp_help" junto al nombre del tipo de dato definido 
+anteriormente para obtener información del mismo:
+
+5- Cree la tabla "empleados" con 3 campos: documento (char de 8), nombre (30 caracteres) y 
+añoingreso (tipo_año):
+
+6- Elimine la regla llamada "RG_año" si existe:
+
+7- Cree la regla que permita valores integer desde 1990 (año en que se inauguró el comercio) y el 
+año actual:
+
+8- Asocie la regla al tipo de datos "tipo_año" especificando que solamente se aplique a los futuros 
+campos de este tipo:
+
+9- Vea si se aplicó a la tabla empleados:
+
+10- Cree la tabla "clientes" con 3 campos: nombre (30 caracteres), añoingreso (tipo_año) y domicilio 
+(30 caracteres):
+
+11- Vea si se aplicó la regla en la nueva tabla:
+
+12- Ingrese registros con valores para el año que infrinjan la regla en la tabla "empleados":
+
+13- Intente ingresar en la tabla "clientes" un valor de fecha que infrinja la regla:
+
+14- Quite la asociación de la regla con el tipo de datos:
+
+15- Vea si se quitó la asociación:
+
+16- Vuelva a asociar la regla, ahora sin el parámetro "futureonly":
+
+17- Intente agregar una fecha de ingreso fuera del intervalo que admite la regla en cualquiera de 
+las tablas (ambas tienen la asociación):
+
+18- Vea la información del tipo de dato:
+
+19- Elimine la regla llamada "RG_añonegativo", si existe:
+
+20- Cree una regla llamada "RG_añonegativo" que admita valores entre -2000 y -1:
+
+21- Asocie la regla "RG_añonegativo" al campo "añoingreso" de la tabla "clientes":
+
+22- Vea si se asoció:
+
+23- Verifique que no está asociada al tipo de datos "tipo_año":
+
+24- Intente ingresar un registro con valor '-1900' para el campo "añoingreso" de "empleados":
+
+25- Ingrese un registro con valor '-1900' para el campo "añoingreso" de "clientes" y recupere los 
+registros de dicha tabla:
