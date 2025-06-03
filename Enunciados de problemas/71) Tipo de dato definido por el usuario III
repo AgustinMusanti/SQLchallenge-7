@@ -1,0 +1,67 @@
+Tipo de dato definido por el usuario (valores predeterminados)
+
+Un comercio almacena los datos de sus empleados en una tabla denominada "empleados" y en otra 
+llamada "clientes" los datos de sus clientes".
+
+1- Elimine ambas tablas, si existen:
+
+2- Defina un nuevo tipo de dato llamado "tipo_año". Primero debe eliminarlo, si existe, para volver 
+a crearlo.
+
+3- Cree un tipo de dato definido por el usuario llamado "tipo_año" basado en el tipo "int" que 
+permita valores nulos:
+
+4- Ejecute el procedimiento almacenado "sp_help" junto al nombre del tipo de dato definido 
+anteriormente para obtener información del mismo:
+
+5- Cree la tabla "empleados" con 3 campos: documento (char de 8), nombre (30 caracteres) y 
+añoingreso (tipo_año):
+
+6- Elimine el valor predeterminado "VP_añoactual" si existe:
+
+7- Cree el valor predeterminado "VP_añoactual" que almacene el año actual:
+
+8- Asocie el valor predeterminado al tipo de datos "tipo_año" especificando que solamente se aplique 
+a los futuros campos de este tipo:
+
+9- Vea si se aplicó a la tabla empleados:
+
+10- Cree la tabla "clientes" con 3 campos: nombre (30 caracteres), añoingreso (tipo_año) y domicilio 
+(30 caracteres):
+
+11- Vea si se aplicó la regla en la nueva tabla:
+
+12- Ingrese un registro con valores por defecto en la tabla "empleados" y vea qué se almacenó en 
+"añoingreso":
+
+13- Ingrese en la tabla "clientes" un registro con valores por defecto y recupere los registros:
+
+14- Elimine el valor predeterminado llamado "VP_año2000", si existe:
+
+15- Cree un valor predeterminado llamado "VP_año2000" con el valor 2000:
+
+16- Asócielo al tipo de dato definido sin especificar "futureonly":
+
+17- Verifique que se asoció a la tabla "empleados":
+
+18- Verifique que reemplazó al valor predeterminado anterior en la tabla "clientes":
+
+18- Ingrese un registro en ambas tablas con valores por defecto y vea qué se almacenó en el año de 
+ingreso:
+
+19- Vea la información del tipo de dato:
+
+20- Intente agregar a la tabla "empleados" una restricción "default":
+
+21- Quite la asociación del valor predeterminado al tipo de dato:
+
+22- Agregue a la tabla "empleados" una restricción "default":
+
+23- Asocie el valor predeterminado "VP_añoactual" al tipo de dato "tipo_año":
+
+24- Verifique que el tipo de dato tiene asociado el valor predeterminado:
+
+25- Verifique que la tabla "clientes" tiene asociado el valor predeterminado:
+
+26- Verifique que la tabla "empleados" no tiene asociado el valor predeterminado "VP_añoactual" 
+asociado al tipo de dato y tiene la restricción "default":
