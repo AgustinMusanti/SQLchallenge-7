@@ -1,0 +1,47 @@
+Tipo de dato definido por el usuario (eliminar)
+
+Un comercio almacena los datos de sus empleados en una tabla denominada "empleados".
+
+1- Elimine la tabla si existe:
+
+2- Defina un nuevo tipo de dato llamado "tipo_año". Primero debe eliminarlo, si existe para volver a 
+crearlo:
+
+3- Cree un tipo de dato definido por el usuario llamado "tipo_año" basado en el tipo "int" que 
+permita valores nulos:
+
+4- Elimine la regla llamada "RG_año" si existe:
+
+5- Cree la regla que permita valores integer desde 1990 (fecha en que se inauguró el comercio) y el 
+año actual:
+
+6- Asocie la regla al tipo de datos "tipo_año":
+
+7- Cree la tabla "empleados" con un campo del tipo creado anteriormente:
+
+8- Intente ingresar un registro con un valor inválido para el campo "añoingreso":
+
+9- Ingrese un registro con un valor válido para el campo "añoingreso":
+
+10- Intente eliminar la regla asociada al tipo de datos:
+
+11- Elimine la asociación:
+
+12- Verifique que la asociación ha sido eliminada pero la regla sigue existiendo:
+
+13- Elimine la regla:
+
+14- Verifique que la regla ya no existe:
+
+15- Ingrese el registro que no pudo ingresar en el punto 8:
+
+16- Intente eliminar el tipo de datos "tipo_año":
+
+17- Elimine la tabla "empleados":
+
+18- Verifique que el tipo de dato "tipo_año" aún existe:
+
+19- Elimine el tipo de datos:
+
+20- Verifique que el tipo de dato "tipo_año" ya no existe:
+ 
