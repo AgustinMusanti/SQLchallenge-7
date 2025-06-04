@@ -1,0 +1,30 @@
+Subconsultas como expresión
+
+Un profesor almacena el documento, nombre y la nota final de cada alumno de su clase en una tabla 
+llamada "alumnos".
+
+1- Elimine la tabla, si existe:
+
+2- Créela con los siguientes campos:
+
+ create table alumnos(
+  documento char(8),
+  nombre varchar(30),
+  nota decimal(4,2),
+  primary key(documento),
+  constraint CK_alumnos_nota_valores check (nota>=0 and nota <=10),
+ );
+
+3-Ingrese algunos registros:
+
+4- Obtenga todos los datos de los alumnos con la nota más alta, empleando subconsulta.
+
+5- Realice la misma consulta anterior pero intente que la consulta interna retorne, además del 
+máximo valor de nota, el nombre. 
+
+6- Muestre los alumnos que tienen una nota menor al promedio, su nota, y la diferencia con el 
+promedio.
+
+7- Cambie la nota del alumno que tiene la menor nota por 4.
+
+8- Elimine los alumnos cuya nota es menor al promedio.
