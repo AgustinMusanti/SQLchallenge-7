@@ -1,0 +1,60 @@
+Subconsultas correlacionadas
+
+Un club dicta clases de distintos deportes a sus socios. El club tiene una tabla llamada 
+"inscriptos" en la cual almacena el número de "socio", el código del deporte en el cual se inscribe 
+y la cantidad de cuotas pagas (desde 0 hasta 10 que es el total por todo el año), y una tabla 
+denominada "socios" en la que guarda los datos personales de cada socio.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas:
+
+ create table socios(
+  numero int identity,
+  documento char(8),
+  nombre varchar(30),
+  domicilio varchar(30),
+  primary key (numero)
+ );
+ 
+ create table inscriptos (
+  numerosocio int not null,
+  deporte varchar(20) not null,
+  cuotas tinyint
+  constraint CK_inscriptos_cuotas
+   check (cuotas>=0 and cuotas<=10)
+  constraint DF_inscriptos_cuotas default 0,
+  primary key(numerosocio,deporte),
+  constraint FK_inscriptos_socio
+   foreign key (numerosocio)
+   references socios(numero)
+   on update cascade
+   on delete cascade,
+ );
+
+3- Ingrese algunos registros:
+
+('23333333','Alberto Paredes','Colon 111');
+('24444444','Carlos Conte','Sarmiento 755');
+('25555555','Fabian Fuentes','Caseros 987');
+('26666666','Hector Lopez','Sucre 344');
+
+(1,'tenis',1);
+(1,'basquet',2);
+(1,'natacion',1);
+(2,'tenis',9);
+(2,'natacion',1);
+(2,'basquet',default);
+(2,'futbol',2);
+(3,'tenis',8);
+(3,'basquet',9);
+(3,'natacion',0);
+(4,'basquet',10);
+
+4- Se necesita un listado de todos los socios que incluya nombre y domicilio, la cantidad de 
+deportes a los cuales se ha inscripto, empleando subconsulta.
+
+5- Se necesita el nombre de todos los socios, el total de cuotas que debe pagar (10 por cada 
+deporte) y el total de cuotas pagas, empleando subconsulta.
+
+6- Obtenga la misma salida anterior empleando join.
