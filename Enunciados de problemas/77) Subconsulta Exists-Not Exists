@@ -1,0 +1,42 @@
+Subconsulta - Exists y Not Exists
+
+Un club dicta clases de distintos deportes a sus socios. El club tiene una tabla llamada 
+"inscriptos" en la cual almacena el número de "socio", el código del deporte en el cual se inscribe 
+y la cantidad de cuotas pagas (desde 0 hasta 10 que es el total por todo el año), y una tabla 
+denominada "socios" en la que guarda los datos personales de cada socio.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas:
+
+ create table socios(
+  numero int identity,
+  documento char(8),
+  nombre varchar(30),
+  domicilio varchar(30),
+  primary key (numero)
+ );
+ 
+ create table inscriptos (
+  numerosocio int not null,
+  deporte varchar(20) not null,
+  cuotas tinyint
+  constraint CK_inscriptos_cuotas
+   check (cuotas>=0 and cuotas<=10)
+  constraint DF_inscriptos_cuotas default 0,
+  primary key(numerosocio,deporte),
+  constraint FK_inscriptos_socio
+   foreign key (numerosocio)
+   references socios(numero)
+   on update cascade
+   on delete cascade,
+ );
+
+3- Ingrese algunos registros:
+
+4- Emplee una subconsulta con el operador "exists" para devolver la lista de socios que se 
+inscribieron en un determinado deporte.
+
+5- Busque los socios que NO se han inscripto en un deporte determinado empleando "not exists".
+
+6- Muestre todos los datos de los socios que han pagado todas las cuotas.
