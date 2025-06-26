@@ -1,0 +1,74 @@
+Vistas
+
+Un club dicta cursos de distintos deportes. Almacena la información en varias tablas.
+El director no quiere que los empleados de administración conozcan la estructura de las tablas ni 
+algunos datos de los profesores y socios, por ello se crean vistas a las cuales tendrán acceso.
+
+1- Elimine las tablas y créelas nuevamente:
+
+ create table socios(
+  documento char(8) not null,
+  nombre varchar(40),
+  domicilio varchar(30),
+  constraint PK_socios_documento
+   primary key (documento)
+ );
+
+ create table profesores(
+  documento char(8) not null,
+  nombre varchar(40),
+  domicilio varchar(30),
+  constraint PK_profesores_documento
+   primary key (documento)
+ );
+
+ create table cursos(
+  numero tinyint identity,
+  deporte varchar(20),
+  dia varchar(15),
+   constraint CK_inscriptos_dia check (dia in('lunes','martes','miercoles','jueves','viernes','sabado')),
+  documentoprofesor char(8),
+  constraint PK_cursos_numero
+   primary key (numero),
+ );
+
+ create table inscriptos(
+  documentosocio char(8) not null,
+  numero tinyint not null,
+  matricula char(1),
+  constraint CK_inscriptos_matricula check (matricula in('s','n')),
+  constraint PK_inscriptos_documento_numero
+   primary key (documentosocio,numero)
+ );
+
+2- Ingrese algunos registros para todas las tablas:
+
+3- Elimine la vista "vista_club" si existe:
+
+4- Cree una vista en la que aparezca el nombre y documento del socio, el deporte, el día y el nombre 
+del profesor.
+
+5- Muestre la información contenida en la vista.
+
+6- Realice una consulta a la vista donde muestre la cantidad de socios inscriptos en cada deporte 
+ordenados por cantidad.
+
+7- Muestre (consultando la vista) los cursos (deporte y día) para los cuales no hay inscriptos.
+
+8- Muestre los nombres de los socios que no se han inscripto en ningún curso (consultando la vista)
+
+9- Muestre (consultando la vista) los profesores que no tienen asignado ningún deporte aún.
+
+10- Muestre (consultando la vista) el nombre y documento de los socios que deben matrículas.
+
+11- Consulte la vista y muestre los nombres de los profesores y los días en que asisten al club para 
+dictar sus clases.
+
+12- Muestre la misma información anterior pero ordenada por día.
+
+13- Muestre todos los socios que son compañeros en tenis los lunes.
+
+14- Elimine la vista "vista_inscriptos" si existe y créela para que muestre la cantidad de 
+inscriptos por curso, incluyendo el número del curso, el nombre del deporte y el día.
+
+15- Consulte la vista:
