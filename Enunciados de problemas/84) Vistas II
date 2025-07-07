@@ -1,0 +1,72 @@
+Vistas (modificar datos de una tabla a través de vistas)
+
+Un club dicta cursos de distintos deportes. Almacena la información en varias tablas.
+
+1- Elimine las tabla "inscriptos", "socios" y "cursos", si existen:
+
+2- Cree las tablas:
+
+ create table socios(
+  documento char(8) not null,
+  nombre    varchar(40),
+  domicilio varchar(30),
+  constraint PK_socios_documento
+  primary key (documento)
+ );
+
+ create table cursos(
+  numero  tinyint identity,
+  deporte varchar(20),
+  dia     varchar(15),
+  constraint CK_inscriptos_dia check (dia in('lunes','martes','miercoles','jueves','viernes','sabado')),
+  profesor varchar(20),
+  constraint PK_cursos_numero
+  primary key (numero),
+ );
+
+ create table inscriptos(
+  documentosocio char(8) not null,
+  numero         tinyint not null,
+  matricula      char(1),
+  constraint PK_inscriptos_documento_numero
+  primary key (documentosocio,numero),
+  constraint FK_inscriptos_documento
+  foreign key (documentosocio)
+  references socios(documento)
+  on update cascade,
+  constraint FK_inscriptos_numero
+  foreign key (numero)
+  references cursos(numero)
+  on update cascade
+  );
+
+3- Ingrese algunos registros para todas las tablas:
+
+4- Realice un join para mostrar todos los datos de todas las tablas, sin repetirlos:
+
+5- Elimine, si existe, la vista "vista_cursos":
+
+6- Cree la vista "vista_cursos" que muestre el número, deporte y día de todos los cursos.
+
+7- Consulte la vista ordenada por deporte.
+
+8- Ingrese un registro en la vista "vista_cursos" y vea si afectó a "cursos".
+
+9- Actualice un registro sobre la vista y vea si afectó a la tabla "cursos".
+
+10- Elimine un registro de la vista para el cual no haya inscriptos y vea si afectó a "cursos".
+
+11- Intente eliminar un registro de la vista para el cual haya inscriptos.
+
+12- Elimine la vista "vista_inscriptos" si existe y créela para que muestre el documento y nombre 
+del socio, el numero de curso, el deporte y día de los cursos en los cuales está inscripto.
+
+13- Intente ingresar un registro en la vista.
+
+14- Actualice un registro de la vista.
+
+15- Vea si afectó a la tabla "socios":
+
+16- Intente actualizar el documento de un socio.
+
+17- Intente eliminar un registro de la vista.
