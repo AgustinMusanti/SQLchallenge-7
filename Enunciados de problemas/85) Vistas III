@@ -1,0 +1,83 @@
+ Vistas modificar (alter view)
+
+Un club dicta cursos de distintos deportes. Almacena la información en varias tablas.
+
+1- Elimine las tabla "inscriptos", "socios" y "cursos", si existen:
+
+2- Cree las tablas:
+
+ create table socios(
+  documento char(8) not null,
+  nombre varchar(40),
+  domicilio varchar(30),
+  constraint PK_socios_documento
+   primary key (documento)
+ );
+
+ create table cursos(
+  numero tinyint identity,
+  deporte varchar(20),
+  dia varchar(15),
+   constraint CK_inscriptos_dia check (dia in('lunes','martes','miercoles','jueves','viernes','sabado')),
+  profesor varchar(20),
+  constraint PK_cursos_numero
+   primary key (numero),
+ );
+
+ create table inscriptos(
+  documentosocio char(8) not null,
+  numero tinyint not null,
+  matricula char(1),
+  constraint PK_inscriptos_documento_numero
+   primary key (documentosocio,numero),
+  constraint FK_inscriptos_documento
+   foreign key (documentosocio)
+   references socios(documento)
+   on update cascade,
+  constraint FK_inscriptos_numero
+   foreign key (numero)
+   references cursos(numero)
+   on update cascade
+  );
+
+3- Ingrese algunos registros para todas las tablas:
+
+4- Elimine la vista "vista_deudores" si existe:
+
+5- Cree la vista "vista_deudores" que muestre el documento y nombre del socio, el deporte, el día y 
+la matrícula, de todas las inscripciones no pagas colocando "with check option".
+
+6- Consulte la vista:
+
+7- Veamos el texto de la vista.
+
+8- Intente actualizar a "s" la matrícula de una inscripción desde la vista.
+
+9- Modifique el documento de un socio mediante la vista.
+
+10- Vea si se alteraron las tablas referenciadas en la vista:
+
+11- Modifique la vista para que muestre el domicilio, coloque la opción de encriptación y omita 
+"with check option".
+
+12- Consulte la vista para ver si se modificó:
+
+13- Vea el texto de la vista.
+
+14- Actualice la matrícula de un inscripto.
+
+15- Consulte la vista:
+
+16- Elimine la vista "vista_socios" si existe:
+
+17- Cree la vista "vista_socios" que muestre todos los campos de la tabla "socios".
+
+18- Consulte la vista.
+
+19- Agregue un campo a la tabla "socios".
+
+20- Consulte la vista "vista_socios".
+
+21- Altere la vista para que aparezcan todos los campos.
+
+22- Consulte la vista.
