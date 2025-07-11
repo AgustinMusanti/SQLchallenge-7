@@ -1,0 +1,5 @@
+1: Cree la tabla "ClientesFinancieros"
+
+2: Inserte algunos registros.
+
+3: Evaluar si un cliente es de riesgo alto si su deuda supera el 60% de sus ingresos.
