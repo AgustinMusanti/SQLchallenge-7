@@ -1,0 +1,53 @@
+Procedimientos almacenados (parámetros de entrada)
+
+Una empresa almacena los datos de sus empleados en una tabla llamada "empleados".
+
+1- Eliminamos la tabla, si existe y la creamos:
+
+
+ create table empleados(
+  documento char(8),
+  nombre varchar(20),
+  apellido varchar(20),
+  sueldo decimal(6,2),
+  cantidadhijos tinyint,
+  seccion varchar(20),
+  primary key(documento)
+ );
+
+2- Ingrese algunos registros:
+
+3- Elimine el procedimiento llamado "pa_empleados_sueldo" si existe:
+
+4- Cree un procedimiento almacenado llamado "pa_empleados_sueldo" que seleccione los nombres, 
+apellidos y sueldos de los empleados que tengan un sueldo superior o igual al enviado como 
+parámetro.
+
+5- Ejecute el procedimiento creado anteriormente con distintos valores:
+
+6- Ejecute el procedimiento almacenado "pa_empleados_sueldo" sin parámetros.
+
+7- Elimine el procedimiento almacenado "pa_empleados_actualizar_sueldo" si existe:
+
+8- Cree un procedimiento almacenado llamado "pa_empleados_actualizar_sueldo" que actualice los 
+sueldos iguales al enviado como primer parámetro con el valor enviado como segundo parámetro.
+
+9- Ejecute el procedimiento creado anteriormente y verifique si se ha ejecutado correctamente:
+
+10- Ejecute el procedimiento "pa_empleados_actualizar_sueldo" enviando un solo parámetro.
+
+11- Ejecute el procedimiento almacenado "pa_empleados_actualizar_sueldo" enviando en primer lugar el 
+parámetro @sueldonuevo y en segundo lugar @sueldoanterior (parámetros por nombre).
+
+12- Verifique el cambio:
+
+13- Elimine el procedimiento almacenado "pa_sueldototal", si existe:
+
+14- Cree un procedimiento llamado "pa_sueldototal" que reciba el documento de un empleado y muestre 
+su nombre, apellido y el sueldo total (resultado de la suma del sueldo y salario por hijo, que es de 
+$200 si el sueldo es menor a $500 y $100, si el sueldo es mayor o igual a $500). Coloque como valor 
+por defecto para el parámetro el patrón "%".
+
+15- Ejecute el procedimiento anterior enviando diferentes valores:
+
+16-  Ejecute el procedimiento sin enviar parámetro para que tome el valor por defecto.
