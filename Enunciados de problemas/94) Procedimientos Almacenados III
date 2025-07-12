@@ -1,0 +1,41 @@
+Procedimientos almacenados (parámetros de salida)
+
+Una empresa almacena los datos de sus empleados en una tabla llamada "empleados".
+
+1- Eliminamos la tabla, si existe y la creamos:
+
+ create table empleados(
+  documento     char(8),
+  nombre        varchar(20),
+  apellido      varchar(20),
+  sueldo        decimal(6,2),
+  cantidadhijos tinyint,
+  seccion       varchar(20),
+  primary key(documento)
+ );
+
+2- Ingrese algunos registros:
+
+3- Elimine el procedimiento llamado "pa_seccion" si existe:
+
+4- Cree un procedimiento almacenado llamado "pa_seccion" al cual le enviamos el nombre de una 
+sección y que nos retorne el promedio de sueldos de todos los empleados de esa sección y el valor 
+mayor de sueldo (de esa sección)
+
+5- Ejecute el procedimiento creado anteriormente con distintos valores.
+
+6- Ejecute el procedimiento "pa_seccion" sin pasar valor para el parámetro "sección". Luego muestre 
+los valores devueltos por el procedimiento.
+
+7- Elimine el procedimiento almacenado "pa_sueldototal", si existe y cree un procedimiento con ese 
+nombre que reciba el documento de un empleado y retorne el sueldo total, resultado de la suma del 
+sueldo y salario por hijo, que es $200 si el sueldo es menor a $500 y $100 si es mayor o igual.
+
+8- Ejecute el procedimiento anterior enviando un documento existente.
+
+9- Ejecute el procedimiento anterior enviando un documento inexistente.
+
+10- Ejecute el procedimiento anterior enviando el documento de un empleado en cuyo campo "sueldo" 
+contenga "null".
+
+11- Ejecute el procedimiento anterior sin enviar valor para el parámetro "documento".
