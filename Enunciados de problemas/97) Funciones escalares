@@ -1,0 +1,52 @@
+Funciones escalares (crear y llamar)
+
+Una clínica almacena los turnos para los distintos médicos en una tabla llamada "consultas" y en 
+otra tabla "medicos" los datos de los médicos.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas con las siguientes estructuras:
+
+ create table medicos (
+  documento char(8) not null,
+  nombre    varchar(30),
+  constraint PK_medicos 
+  primary key clustered (documento)
+ );
+
+ create table consultas(
+  fecha    datetime,
+  medico   char(8) not null,
+  paciente varchar(30),
+  constraint PK_consultas
+  primary key (fecha,medico),
+  constraint FK_consultas_medico
+  foreign key (medico)
+  references medicos(documento)
+  on update cascade
+  on delete cascade
+ );
+
+3- Ingrese algunos registros:
+
+4- Elimine la función "f_nombreDia" si existe:
+
+5- Cree la función "f_nombreDia" que recibe una fecha (tipo string) y nos retorne el nombre del día 
+en español.
+ 
+6- Elimine la función "f_horario" si existe:
+
+7- Cree la función "f_horario" que recibe una fecha (tipo string) y nos retorne la hora y minutos.
+
+8- Elimine la función "f_fecha" si existe:
+
+9- Cree la función "f_fecha" que recibe una fecha (tipo string) y nos retorne la fecha (sin hora ni 
+minutos)
+
+10- Muestre todas las consultas del médico llamado 'Alfredo Acosta', incluyendo el día (emplee la 
+función "f_nombreDia", la fecha (emplee la función "f_fecha"), el horario (emplee la función 
+"f_horario") y el nombre del paciente.
+
+11- Muestre todos los turnos para el día sábado, junto con la fecha, de todos los médicos.
+
+12- Envíe a la función "f_nombreDia" una fecha y muestre el valor retornado:
