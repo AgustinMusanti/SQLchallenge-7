@@ -1,0 +1,51 @@
+Disparador de actualización (update trigger)
+
+Un club almacena los datos de sus socios en una tabla denominada "socios", las inscripciones en 
+"inscriptos" y en otra tabla "morosos" guarda los documentos de los socios que deben matrículas.
+
+1- Elimine las tablas si existen:
+
+2- Cree las tablas, con las siguientes estructuras:
+
+ create table socios(
+  documento char(8) not null,
+  nombre    varchar(30),
+  domicilio varchar(30),
+  constraint PK_socios primary key(documento)
+ );
+
+ create table inscriptos(
+  numero    int identity,
+  documento char(8) not null,
+  deporte   varchar(20),
+  matricula char(1),
+  constraint FK_inscriptos_documento
+  foreign key (documento)
+  references socios(documento),
+  constraint CK_inscriptos_matricula check (matricula in ('s','n')),
+  constraint PK_inscriptos primary key(documento,deporte)
+ );
+ 
+ create table morosos(
+  documento char(8) not null
+ );
+
+3- Ingrese algunos registros en las 3 tablas:
+
+4- Cree un disparador para la tabla "inscriptos" que se active ante una sentencia "update" y no 
+permita actualizar más de un registro.
+
+5- Cree otro disparador para la tabla "inscriptos" que se active ante una sentencia "update". Si se 
+actualiza el pago de la matrícula a 's', el socio debe eliminarse de la tabla "morosos"; no debe 
+permitir modificar a 'n' una matrícula paga.
+
+6- Actualice cualquier campo (diferente de "matricula") de un registro de la tabla "inscriptos".
+
+7- Actualice cualquier campo (diferente de "matricula") de varios registros de la tabla 
+"inscriptos".
+
+8- Actualice el campo "matricula" a 's' de un inscripto que deba la matrícula.
+
+9- Verifique que el campo se actualizó y que el socio ya no está en "morosos":
+
+10-Actualice el campo "matricula" a 'n' de un inscripto que tenga la matrícula paga.
