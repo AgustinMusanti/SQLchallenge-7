@@ -1,0 +1,41 @@
+Disparadores (varios eventos)
+
+Una empresa almacena los datos de sus empleados en una tabla denominada "empleados" y los datos de 
+las distintas sucursales en una tabla "sucursales".
+
+1- Elimine las tablas si existen.
+
+2- Cree las tablas, con las siguientes estructuras:
+
+ create table sucursales(
+  codigo    int identity,
+  domicilio varchar(30),
+  constraint PK_sucursales primary key (codigo)
+ );
+
+ create table empleados(
+  documento char(8) not null,
+  nombre    varchar(30),
+  domicilio varchar(30),
+  sucursal  int not null,
+  constraint PK_empleados primary key (documento),
+  constraint FK_empleados_sucursal foreign key(sucursal)
+  references sucursales(codigo)
+ );
+
+3- Ingrese algunos registros en las dos tablas:
+
+4- Cree un disparador de inserción, eliminación y actualización que no permita modificaciones en la 
+tabla "empleados" si tales modificaciones afectan a empleados de la sucursal de 1.
+
+5- Ingrese un empleado en la sucursal 3.
+
+6- Intente ingresar un empleado en la sucursal 1.
+
+7- Ejecute un "update" sobre "empleados" que permita la transacción.
+
+8- Ejecute un "update" sobre "empleados" que el trigger deshaga.
+
+9- Elimine un empleado (o varios) que no sean de la sucursal 1.
+
+10- Intente eliminar un empleado (o varios) de la sucursal 1.
