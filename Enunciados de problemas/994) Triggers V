@@ -39,9 +39,9 @@ tiene el campo "cantidadmaxima"), el socio  queda inscripto en forma condicional
 información en una tabla denominada "condicionales" que luego analiza, porque si se inscriben muchos 
 para un deporte determinado, se abrirá otro curso.
 
-2- Elimine la tabla "condicionales" si existe:
+3- Elimine la tabla "condicionales" si existe:
 
-3- Cree la tabla, con la siguiente estructura:
+4- Cree la tabla, con la siguiente estructura:
 
  create table condicionales(
   documento char(8) not null,
@@ -49,18 +49,17 @@ para un deporte determinado, se abrirá otro curso.
   fecha datetime
  );
 
-4- Ingrese algunos registros en las tablas "socios", "cursos" e "inscriptos":
+5- Ingrese algunos registros en las tablas "socios", "cursos" e "inscriptos":
  insert into socios values('22222222','Ana Acosta','Avellaneda 800');
 
-5- Cree un trigger "instead of" para el evento de inserción para que, al intentar ingresar un 
+6- Cree un trigger "instead of" para el evento de inserción para que, al intentar ingresar un 
 registro en "inscriptos" controle que el curso no esté completo (tantos inscriptos a tal curso como 
 su "cantidadmaxima"); si lo estuviese, debe ingresarse la inscripción en la tabla "condicionales" y 
 mostrar un mensaje indicando tal situación. Si la "cantidadmaxima" no se alcanzó, se ingresa la 
 inscripción en "inscriptos".
 
-6- Inscriba un socio en un curso que no esté completo.
+7- Inscriba un socio en un curso que no esté completo.
 Verifique que el trigger realizó la acción esperada consultando las tablas:
 
-7- Inscriba un socio en un curso que esté completo.
+8- Inscriba un socio en un curso que esté completo.
 Verifique que el trigger realizó la acción esperada consultando las tablas:
- select *from condicionales;
