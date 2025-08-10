@@ -50,7 +50,6 @@ para un deporte determinado, se abrirá otro curso.
  );
 
 5- Ingrese algunos registros en las tablas "socios", "cursos" e "inscriptos":
- insert into socios values('22222222','Ana Acosta','Avellaneda 800');
 
 6- Cree un trigger "instead of" para el evento de inserción para que, al intentar ingresar un 
 registro en "inscriptos" controle que el curso no esté completo (tantos inscriptos a tal curso como 
