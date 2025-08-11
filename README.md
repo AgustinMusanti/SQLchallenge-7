@@ -4,7 +4,7 @@ Este repositorio contiene la resolución de un extenso desafío de SQL propuesto
 
 ## 📌 Descripción del Desafío
 
-El desafío abarca más de 80 problemas de SQL, organizados en distintos niveles de dificultad, desde lo básico hasta lo avanzado. Cada problema incluye varios incisos que cubren temas esenciales como:
+El desafío abarca más de 100 problemas de SQL, organizados en distintos niveles de dificultad, desde lo básico hasta lo avanzado. Cada problema incluye varios incisos que cubren temas esenciales como:
 
 - Consultas `SELECT` básicas y avanzadas
 - Filtrado y ordenación de datos
