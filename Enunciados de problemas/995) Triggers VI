@@ -1,0 +1,34 @@
+Disparador (condicionales)
+
+Una empresa almacena los datos de sus empleados en una tabla denominada "empleados" y en otra tabla 
+denominada "secciones", información sobre las distintas secciones de la empresa.
+
+1- Elimine las tablas si existen y créelas con los siguientes campos:
+
+ create table secciones(
+  codigo int identity,
+  nombre varchar(30),
+  constraint pk_secciones primary key (codigo)
+ ); 
+
+ create table empleados(
+  documento char(8) not null,
+  nombre    varchar(30),
+  domicilio varchar(30),
+  seccion   int not null,
+  constraint pk_empleados primary key (documento),
+  constraint fk_empleados_seccion foreign key(seccion)
+  references secciones (codigo)
+ ); 
+
+2- Ingrese algunos registros:
+
+3- Cree un disparador de eliminación sobre la tabla "empleados" que permita borrar varios empleados 
+a la vez, pero ningún empleado de la sección "Gerencia".
+Se eliminan todos los empleados solicitados en cualquier sentencia "delete", y luego se vuelven a 
+insertar aquellos de la sección "Gerencia".
+
+4- Elimine varios registros entre los cuales haya un empleado de "Gerencia".
+
+5- Vea el resultado:
+Solamente se eliminaron aquellos que no pertenecen a la sección "Gerencia".
